@@ -14,8 +14,23 @@ public class Room {
     Room room8 = new Room(name,disc );
     Room room9 = new Room(name,disc );
 
+    public void setEast(String east) {
+        this.east = east;
+    }
+
+    public void setNorth(String north) {
+        this.north = north;
+    }
+
+    public void setSouth(String south) {
+        this.south = south;
+    }
+
+    public void setWest(String west) {
+        this.west = west;
+
     room1.setEast(room2);
-    room1.setsouth(room4);
+    room1.setSouth(room4);
     room2.setWest(room1);
     room2.setEast(room3);
     room3.setWest(room2);
@@ -37,19 +52,5 @@ public class Room {
 
 
 
-    public void setEast(String east) {
-        this.east = east;
-    }
-
-    public void setNorth(String north) {
-        this.north = north;
-    }
-
-    public void setSouth(String south) {
-        this.south = south;
-    }
-
-    public void setWest(String west) {
-        this.west = west;
     }
 }
