@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="added Room and Look">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="d2106e7d-865a-4eb9-b89b-c0130413e6ba" name="Changes by kjartanleander" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list id="d2106e7d-865a-4eb9-b89b-c0130413e6ba" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,31 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="7" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="7" end1="7" start2="10" end2="11" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="10" end1="12" start2="14" end2="16" changelist="d2106e7d-865a-4eb9-b89b-c0130413e6ba" />
-        <range start1="13" end1="13" start2="17" end2="18" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="16" end1="16" start2="21" end2="23" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="22" end1="22" start2="29" end2="31" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="25" end1="25" start2="34" end2="36" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="27" end1="27" start2="38" end2="42" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="28" end1="29" start2="43" end2="46" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="30" end1="30" start2="47" end2="51" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="31" end1="31" start2="52" end2="53" changelist="d2106e7d-865a-4eb9-b89b-c0130413e6ba" />
-        <range start1="32" end1="32" start2="54" end2="62" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="6" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="2" end1="2" start2="7" end2="107" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="3" end1="3" start2="108" end2="109" changelist="d2106e7d-865a-4eb9-b89b-c0130413e6ba" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664194964373</updated>
-      <workItem from="1664194967183" duration="13687000" />
+      <workItem from="1664194967183" duration="13969000" />
     </task>
     <task id="LOCAL-00001" summary="added startProgram">
       <created>1664200093484</created>
@@ -97,7 +66,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664200093485</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added Room and Look">
+      <created>1664269595042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664269595042</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes by kjartanleander">
+      <created>1664269682619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664269682619</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added startProgram" />
     <MESSAGE value="added Room and Look" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Room and Look" />
+    <MESSAGE value="Changes by kjartanleander" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by kjartanleander" />
   </component>
 </project>
