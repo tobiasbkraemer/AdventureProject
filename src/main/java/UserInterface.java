@@ -12,8 +12,8 @@ public class UserInterface {
     }
 
     public void welcome() {
-        System.out.println("Welcome to the spaceship! \n"
-                + "-".repeat(30) + "\nWhere to go? Go south or west");
+        System.out.println("-".repeat(30)+"\n"+"Welcome on board the spaceship! \n"
+                + "-".repeat(30) + "\nWhere to go?");
         direction();
 
     }
@@ -50,6 +50,7 @@ public class UserInterface {
                     System.out.println(adventure.getCurrentRoom().getDescription());
                     break;
                 case "exit":
+                    System.out.println("Ending program...");
                     endProgram();
                     break;
                 case "die":
