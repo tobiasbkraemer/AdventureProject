@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class UserInterface {
     Scanner sc = new Scanner(System.in);
     Adventure adventure = new Adventure();
-
+    Map map = new Map();
+    Player player = new Player();
 
 
     public void startProgram() {
