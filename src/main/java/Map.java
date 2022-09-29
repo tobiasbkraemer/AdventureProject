@@ -1,18 +1,18 @@
 public class Map {
-    private Room currentRoom;
+private Room starterRoom;
 
-    public Room getCurrentRoom() {
-        return currentRoom;
+    public Room getStarterRoom() {
+        return starterRoom;
     }
-    public void createRoom() {
-        Room room1 = new Room("room1", "You are in the Cafeteria. Here smells like dogwater, and coffee beans. There is a sound comming from the fridge.");
-        Room room2 = new Room("room2", "You are in the weapon arsenal, there is weapons on the ground, guns, swords, darts but no ammo.");
-        Room room3 = new Room("room3", "You are in the navigation-room, there is dust and spiderwebs everywhere, theres is papers on the counter.");
-        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin, not sure if it works correctly anymore.");
-        Room room5 = new Room("room5", "You are in the toilet, it stinks of dogwater. There is a wierd sound coming from the toilet.");
-        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls.");
-        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat.");
-        Room room8 = new Room("room8", "You are in Storage, it is completely dark. ");
+    public void createMap() {
+        Room room1 = new Room("room1", "You are in the navigation-room, here is dusty and there is spiderwebs in every corner. In the middle of the room there is a table with a map over the whole spaceship.");
+        Room room2 = new Room("room2", "You are in the weapon arsenal, all kinds of weapons are covering the floor. Loads of guns and knifes but no ammo for the guns.");
+        Room room3 = new Room("room3", "You are in the Cafeteria. Here smells like dogwater, and coffee beans.");
+        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin... not sure if it works correctly anymore...");
+        Room room5 = new Room("room5", "You are in the toilet, it stinks of old dogwater. There is a wierd sound coming from the toilet... prepare yourself!");
+        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls... might be useful.");
+        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat!");
+        Room room8 = new Room("room8", "You are in Storage, it is completely dark.");
         Room room9 = new Room("room9", "You are in the communication-room, there is a strange sound coming from the radio.");
         
         room1.setEast(room2);
@@ -60,7 +60,7 @@ public class Map {
         room9.setSouth(null);
         room9.setWest(room8);
 
-        currentRoom = room1;
+        starterRoom = room1;
 
     }
 }

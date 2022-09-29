@@ -54,4 +54,10 @@ public class Room {
     public void setWest(Room west) {
         this.west = west;
     }
+
+    ArrayList <Item> itemlist = new ArrayList<>();
+
+    public ArrayList<Item> getItemlist() {
+        return itemlist;
+    }
 }
