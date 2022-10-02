@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added del 1 done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Tilføjet item class og flyttet rundt samt tilføjet flere commands.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" name="Changes by kjartanleander" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
@@ -36,54 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="4" end1="8" start2="5" end2="6" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="10" end1="10" start2="8" end2="9" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="15" end1="19" start2="14" end2="17" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="21" end1="23" start2="19" end2="20" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="26" end1="27" start2="23" end2="25" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-        <range start1="28" end1="32" start2="26" end2="32" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="33" end1="37" start2="33" end2="39" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="38" end1="42" start2="40" end2="46" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="43" end1="47" start2="47" end2="53" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="49" end1="50" start2="55" end2="56" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="52" end1="52" start2="58" end2="61" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="60" end1="60" start2="69" end2="75" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-        <range start1="63" end1="63" start2="78" end2="87" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-        <range start1="64" end1="65" start2="88" end2="89" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-        <range start1="68" end1="68" start2="92" end2="93" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="70" end1="70" start2="95" end2="113" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="72" end1="73" start2="115" end2="116" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="75" end1="75" start2="118" end2="119" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="77" end1="78" start2="121" end2="122" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
-      <ranges>
-        <range start1="1" end1="2" start2="1" end2="3" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="3" end1="5" start2="4" end2="8" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="7" end1="66" start2="10" end2="12" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="67" end1="87" start2="13" end2="13" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="88" end1="106" start2="14" end2="16" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="33" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-        <range start1="2" end1="3" start2="34" end2="35" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="da6f4491-23c0-4fee-a7c5-74bcca06a980" />
-        <range start1="7" end1="8" start2="9" end2="10" changelist="da6f4491-23c0-4fee-a7c5-74bcca06a980" />
-        <range start1="56" end1="56" start2="58" end2="64" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -121,6 +66,14 @@
       <updated>1664194964373</updated>
       <workItem from="1664194967183" duration="4714000" />
     </task>
+    <task id="LOCAL-00001" summary="Tilføjet item class og flyttet rundt samt tilføjet flere commands.">
+      <created>1664443932166</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664443932166</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tilføjet item class og flyttet rundt samt tilføjet flere commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet item class og flyttet rundt samt tilføjet flere commands." />
   </component>
 </project>
