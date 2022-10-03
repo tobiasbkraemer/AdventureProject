@@ -13,8 +13,9 @@ public class UserInterface {
 
     public void welcome() {
         System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"
-                + "-".repeat(30) + "\nFeel free to look around. Just let me know if you need any help.");
-        handleInput();
+                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help.");
+        String input = "";
+        handleInput(input);
     }
 
     public void handleInput(String input) {
@@ -106,7 +107,19 @@ public class UserInterface {
                     endProgram();
                     break;
                 case "hit":
+                    //TODO Minus 1 health
                     System.out.println("You hit yourself");
+                    break;
+                case "punch":
+                    //TODO Minus 1 health
+                    System.out.println("You punch yourself");
+                    break;
+                case "fart":
+                    //TODO Make 10/100 chance of shart which results in death
+                    System.out.println("You farted");
+                    break;
+                case "spit":
+                    System.out.println("You spit on yourself");
                     break;
                 default:
                     System.out.println("Input invalid. Try again you moron.");

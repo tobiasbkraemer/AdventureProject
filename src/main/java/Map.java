@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Map {
 private Room starterRoom;
 
@@ -73,4 +75,15 @@ private Room starterRoom;
         starterRoom = room1;
 
     }
+
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public Room getStarterRoom() {
+        return starterRoom;
+    }
+
+
 }
