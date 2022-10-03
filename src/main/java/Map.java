@@ -60,6 +60,16 @@ private Room starterRoom;
         room9.setSouth(null);
         room9.setWest(room8);
 
+        Item item1 = new Item("Pills", "older then dogwater");
+        Item item2 = new Item("Dogwater", "Smells");
+        Item item3 = new Item("Dogwater", "Smells");
+        Item item4 = new Item("Dogwater", "Smells");
+        Item item5 = new Item("Dogwater", "Smells");
+        Item item6 = new Item("Dogwater", "Smells");
+        Item item7 = new Item("Dogwater", "Smells");
+
+        room1.addItem(item1);
+
         starterRoom = room1;
 
     }

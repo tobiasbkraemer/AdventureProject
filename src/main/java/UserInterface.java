@@ -17,47 +17,86 @@ public class UserInterface {
         handleInput();
     }
 
-    public void handleInput() {
+    public void handleInput(String input) {
 
-        String input = "";
+
         while (!input.equals("exit")) {
             input = sc.nextLine();
-            switch (input) {
+            String[] inputSplit = input.split(" ");
+            String command = inputSplit[0];
+            String direction = "";
+
+            if (inputSplit.length > 1){
+                direction = inputSplit[1];
+            }
+
+            switch (command) {
                 case "s", "walk south", "south", "go south":
                     if (adventure.go("south")) {
-                        System.out.println("Going south" + "\n" + adventure.getCurrentRoom());
+                        System.out.println("Going south" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
                 case "w", "west", "go west", "walk west":
                     if (adventure.go("west")) {
-                        System.out.println("Going west" + "\n" + adventure.getCurrentRoom());
+                        System.out.println("Going west" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
                 case "e", "east", "go east", "walk east":
                     if (adventure.go("east")) {
-                        System.out.println("Going east" + "\n" + adventure.getCurrentRoom());
+                        System.out.println("Going east" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
                 case "n", "north", "go north", "walk north":
                     if (adventure.go("north")) {
-                        System.out.println("Going north" + "\n" + adventure.getCurrentRoom());
+                        System.out.println("Going north" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
                 case "look":
-                    System.out.println("This is " + adventure.getCurrentRoom().getName());
-                    System.out.println(adventure.getCurrentRoom().getDescription());
+                    System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
+                    System.out.println(adventure.getCurrentRoom().getRoomDescription());
+                    System.out.println(adventure.getCurrentRoom().getRoomItems());
                     break;
                 case "help", "help me", "instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
+
+                case "take":
+                    Item itemTaken = adventure.getPlayer().getCurrentRoom().removeItem(direction);
+                    if (itemTaken == null) {
+                        System.out.println("The item doesn't exist");
+                    } else {
+                        System.out.println("You grabbed " + itemTaken.getItemName()+" for your inventory");
+                        adventure.getPlayer().addItem(itemTaken);
+                    }
+                    break;
+
+                case "drop":
+                    Item itemDropped = adventure.getPlayer().removeItem(direction);
+                    if (itemDropped == null) {
+                        System.out.println("The item doesn't exist");
+                    } else {
+                        System.out.println("You just dropped " + itemDropped.getItemName()+ " from you inventory");
+                        adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
+                    }
+                    break;
+
+                case "inventory", "inv":
+                    if (adventure.getPlayer().getInventory().isEmpty()) {
+                        System.out.println("There is nothing in your inventory :(");
+                    } else {
+                        System.out.println("Items in your inventory: "+"\n"+adventure.getPlayer().getInventory());
+                    }
+                    break;
+
+
                 case "exit":
                     System.out.println("Ending program...");
                     endProgram();

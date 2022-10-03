@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Player {
     private Room currentRoom;
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public Room getCurrentRoom() {
         return currentRoom;
@@ -30,6 +33,23 @@ public class Player {
         }
     }
 
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void addItem(Item item){
+        inventory.add(item);
+    }
+
+    public Item removeItem(String name){
+        for (Item item : inventory){
+            if (item.getItemName().equals(name)){
+                inventory.remove(item);
+                return item;
+            }
+        }
+        return null;
+    }
 }
 
 

@@ -7,7 +7,9 @@ public class Room {
     private Room west;
     private String name;
     private String description;
-    
+
+    private ArrayList <Item> items = new ArrayList<>();
+
 
     public Room (String name, String description) {
         this.name =name;
@@ -16,12 +18,10 @@ public class Room {
 
     public String getDescription () {
         return description;
-
     }
 
     public String getName () {
         return name;
-
     }
 
     public Room getSouthRoom () {
@@ -61,5 +61,15 @@ public class Room {
 
     public ArrayList<Item> getItemlist() {
         return itemlist;
+    }
+
+    public Item removeItem(String name){
+        for (Item item : items){
+            if (item.getItemName().equals(name)){
+                items.remove(item);
+                return item;
+            }
+        }
+        return null;
     }
 }
