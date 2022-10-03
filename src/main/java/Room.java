@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Room {
     private Room south;
     private Room north;
@@ -5,7 +7,7 @@ public class Room {
     private Room west;
     private String name;
     private String description;
-
+    
 
     public Room (String name, String description) {
         this.name =name;
