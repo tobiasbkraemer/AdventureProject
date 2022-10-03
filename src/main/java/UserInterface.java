@@ -103,7 +103,7 @@ public class UserInterface {
                     endProgram();
                     break;
                 case "die":
-                    System.out.println("You die...");
+                    System.out.println("You commit die...");
                     endProgram();
                     break;
                 case "hit":
@@ -136,7 +136,7 @@ public class UserInterface {
                 Type n, north, go north, walk north to go north
                 Type w, west, go west, walk west to go west
                 type e, east, go east, walk east to go east
-                
+                                
                 Commands:
                 Type look to see what room you are in, and a description of your surroundings
                 Type exit or die to exit the game

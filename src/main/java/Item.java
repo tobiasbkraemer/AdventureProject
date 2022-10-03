@@ -1,15 +1,24 @@
-public class Item {
-private String location;
-private String name;
-private String description;
+import java.util.ArrayList;
 
-public Item (String location, String name, String description) {
-    this.location=location;
-    this.name=name;
-    this.description=description;
-}
-//String location
-        /*
+public class Item {
+    private String name;
+    private String description;
+
+    public Item(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public String getItemDescription() {
+        return description;
+    }
+
+    public String getItemName() {
+        return name;
+
+    }
+/*
+String location
 private Item knife;
 private Item key;
 private Item gamemap;
@@ -19,6 +28,7 @@ private Item papers;
 private Item dogwater;
 private Item bottle;
 private Item oldMedicin;
-private Item coffeeBeans; */
+private Item coffeeBeans;
+*/
 
 }

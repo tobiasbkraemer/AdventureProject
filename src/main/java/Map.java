@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 
 public class Map {
-private Room starterRoom;
+    private Room starterRoom;
+    ArrayList<Item> items = new ArrayList<>();
 
-    public Room getStarterRoom() {
-        return starterRoom;
-    }
     public void createMap() {
         Room room1 = new Room("room1", "You are in the navigation-room, here is dusty and there is spiderwebs in every corner. In the middle of the room there is a table with a map over the whole spaceship.");
         Room room2 = new Room("room2", "You are in the weapon arsenal, all kinds of weapons are covering the floor. Loads of guns and knifes but no ammo for the guns.");
@@ -16,7 +14,7 @@ private Room starterRoom;
         Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat!");
         Room room8 = new Room("room8", "You are in Storage, it is completely dark.");
         Room room9 = new Room("room9", "You are in the communication-room, there is a strange sound coming from the radio.");
-        
+
         room1.setEast(room2);
         room1.setSouth(room4);
         room1.setWest(null);
