@@ -101,6 +101,3 @@ public class UserInterface {
         System.out.println("Ending program...");
     }
 }
-
-
-}

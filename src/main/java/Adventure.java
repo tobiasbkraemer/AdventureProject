@@ -12,24 +12,8 @@ public class Adventure {
         return player.getCurrentRoom();
     }
 
-    public boolean goWest() {
-        if (currentRoom.getWestRoom() != null) {
-            currentRoom = currentRoom.getWestRoom();
-            return true;
-        } else {
-            System.out.println("The path is blocked!");
-            return false;
-        }
-    }
-
-    public boolean goEast() {
-        if (currentRoom.getEastRoom() != null) {
-            currentRoom = currentRoom.getEastRoom();
-            return true;
-        } else {
-            System.out.println("The path is blocked!");
-            return false;
-        }
+    public boolean go(String direction){
+        return player.move(direction);
     }
 }
 
