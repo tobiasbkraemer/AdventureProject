@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Item {
     private String name;
     private String description;
@@ -17,18 +15,5 @@ public class Item {
         return name;
 
     }
-/*
-String location
-private Item knife;
-private Item key;
-private Item gamemap;
-private Item shield;
-private Item darts;
-private Item papers;
-private Item dogwater;
-private Item bottle;
-private Item oldMedicin;
-private Item coffeeBeans;
-*/
 
 }
