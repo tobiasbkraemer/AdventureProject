@@ -71,6 +71,7 @@ public class Room {
     public ArrayList<Item> getRoomItems() {
         return items;
     }
+    
 
     public Item removeItem(String name){
         for (Item item : items){

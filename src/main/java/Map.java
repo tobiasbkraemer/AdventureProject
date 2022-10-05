@@ -60,15 +60,14 @@ public class Map {
         room9.setSouth(null);
         room9.setWest(room8);
 
-        Item item1 = new Item("Pills", "older then dogwater");
-        Item item2 = new Item("Dogwater", "Smells");
-        Item item3 = new Item("Dogwater", "Smells");
-        Item item4 = new Item("Dogwater", "Smells");
-        Item item5 = new Item("Dogwater", "Smells");
-        Item item6 = new Item("Dogwater", "Smells");
-        Item item7 = new Item("Dogwater", "Smells");
+        Item item1 = new Item("Map", "an old map over the spaceship");
+        Item item2 = new Item("Flashlight", "great for dark rooms");
+        Item item3 = new Item("Keys", "hanging on the wall, useful for opening door");
+
 
         room1.addItem(item1);
+        room3.addItem(item2);
+        room8.addItem(item3);
 
         starterRoom = room1;
 
