@@ -39,7 +39,7 @@ public class UserInterface {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "w", "west", "go west", "walk west":
+                case "w", "west", "goest", "walk west":
                     if (adventure.go("west")) {
                         System.out.println("Going west" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
@@ -68,7 +68,6 @@ public class UserInterface {
                 case "help", "help me", "instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
-
                 case "take":
                     Item itemTaken = adventure.getPlayer().getCurrentRoom().removeItem(direction);
                     if (itemTaken == null) {
