@@ -63,7 +63,11 @@ public class UserInterface {
                 case "look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
                     System.out.println(adventure.getCurrentRoom().getRoomDescription());
-                    System.out.println(adventure.getCurrentRoom().getRoomItems());
+                    if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()){
+                        for (Item item : adventure.getPlayer().getCurrentRoom().getRoomItems()){
+                            System.out.println(item.getItemName() + ", " + item.getItemDescription());
+                        }
+                    }
                     break;
                 case "help", "help me", "instruction", "instructions", "command", "commands":
                     showHelp();
@@ -92,7 +96,10 @@ public class UserInterface {
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
-                        System.out.println("Items in your inventory: "+"\n"+adventure.getPlayer().getInventory());
+                        System.out.println("\"Items in your inventory: "+"\n");
+                        for (Item item : adventure.getPlayer().getInventory()){
+                            System.out.println(item.getItemName() + ", " + item.getItemDescription());
+                        }
                     }
                     break;
 

@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added monday update 2.0">
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added onsdag update 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-    </list>
-    <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="da6f4491-23c0-4fee-a7c5-74bcca06a980" name="Changes by Simon Bang Dessau" comment="Added SImon push">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-    </list>
+    <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,14 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
-      <ranges>
-        <range start1="71" end1="72" start2="71" end2="72" changelist="da6f4491-23c0-4fee-a7c5-74bcca06a980" />
-        <range start1="73" end1="73" start2="73" end2="75" changelist="8261a67f-1352-452f-9791-95808c399b70" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -146,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664807803702</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added onsdag update 1.0">
+      <created>1664963747189</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664963747191</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes by kjartanleander">
+      <created>1664963762625</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664963762625</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +171,8 @@
     <MESSAGE value="Added monday update 2.0" />
     <MESSAGE value="Added weaksauce" />
     <MESSAGE value="Added SImon push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added SImon push" />
+    <MESSAGE value="Added onsdag update 1.0" />
+    <MESSAGE value="Changes by kjartanleander" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by kjartanleander" />
   </component>
 </project>
