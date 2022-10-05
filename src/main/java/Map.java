@@ -19,6 +19,7 @@ public class Map {
         room1.setSouth(room4);
         room1.setWest(null);
         room1.setNorth(null);
+        room1.createFood("apple","may be giftig",-1);
 
         room2.setWest(room1);
         room2.setEast(room3);

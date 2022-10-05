@@ -60,8 +60,12 @@ public class Room {
 
     public void createItem (String name, String description){
         Item item = new Item (name, description);
-        items.add(item);
+        addItem(item);
+    }
 
+    public void createFood (String name, String description, int healthPoints) {
+        Food food = new Food(name, description,healthPoints);
+        addItem(food);
     }
 
     public void addItem(Item item) {

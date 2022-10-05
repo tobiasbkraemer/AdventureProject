@@ -3,6 +3,16 @@ import java.util.ArrayList;
 public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private int health;
+    private final int maxHealth = 10;
+
+    public Player(int health) {
+        this.health=health;
+    }
+
+    public int getHealth () {
+        return health;
+    }
 
     public Room getCurrentRoom() {
         return currentRoom;
