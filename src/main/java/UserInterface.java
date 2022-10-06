@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     Scanner sc = new Scanner(System.in);
+
     private Adventure adventure;
 
     public void startProgram() {
@@ -19,13 +20,11 @@ public class UserInterface {
     }
 
     public void handleInput(String input) {
-
-
         while (!input.equals("exit")) {
             input = sc.nextLine();
             String[] inputSplit = input.split(" ");
+            String userInput = "";
             String command = inputSplit[0];
-            String direction = "";
 
             if (inputSplit.length > 1){
                 direction = inputSplit[1];
@@ -39,7 +38,7 @@ public class UserInterface {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "w", "west", "goest", "walk west":
+                case "w", "west", "go west", "walk west":
                     if (adventure.go("west")) {
                         System.out.println("Going west" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
@@ -60,6 +59,11 @@ public class UserInterface {
                         System.out.println("The path is blocked");
                     }
                     break;
+
+                case "health", "hp":
+                    System.out.println("Currently you have " + adventure.getPlayer().getHealth() + " health");
+                    break;
+
                 case "look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
                     System.out.println(adventure.getCurrentRoom().getRoomDescription());
@@ -72,8 +76,9 @@ public class UserInterface {
                 case "help", "help me", "instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
+
                 case "take":
-                    Item itemTaken = adventure.getPlayer().getCurrentRoom().removeItem(direction);
+                    Item itemTaken = adventure.getPlayer().getCurrentRoom().removeItem(userInput);
                     if (itemTaken == null) {
                         System.out.println("The item doesn't exist");
                     } else {
@@ -82,13 +87,30 @@ public class UserInterface {
                     }
                     break;
 
+                
+
                 case "drop":
-                    Item itemDropped = adventure.getPlayer().removeItem(direction);
+                    Item itemDropped = adventure.getPlayer().removeItem(userInput);
                     if (itemDropped == null) {
                         System.out.println("The item doesn't exist");
                     } else {
                         System.out.println("You just dropped " + itemDropped.getItemName()+ " from you inventory");
                         adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
+                    }
+                    break;
+                case "eat", "Eat":
+                    ReturnMessage result = adventure.playerEat(userInput);
+                    switch (result) {
+                        case OK:
+                            System.out.println("You ate " + userInput);
+                            System.out.println("Your health is now at: " + adventure.getPlayer().getHealth());
+                            break;
+                        case CANT:
+                            System.out.println(userInput + " is not edible");
+                            break;
+                        case NOT_FOUND:
+                            System.out.println(userInput + " cant be found in your inventory or room");
+                            break;
                     }
                     break;
 
@@ -109,7 +131,7 @@ public class UserInterface {
                     endProgram();
                     break;
                 case "die":
-                    System.out.println("You commit die...");
+                    System.out.println("You commit Suicide...");
                     endProgram();
                     break;
                 case "hit":
@@ -128,7 +150,7 @@ public class UserInterface {
                     System.out.println("You spit on yourself");
                     break;
                 default:
-                    System.out.println("Input invalid. Try again you moron.");
+                    System.out.println("Input invalid. Try again.");
                     break;
             }
         }
@@ -146,6 +168,10 @@ public class UserInterface {
                 Commands:
                 Type look to see what room you are in, and a description of your surroundings
                 Type exit or die to exit the game
+                Type eat to eat a food
+                Type inv to see inventory
+                Type drop to drop a item
+                Type health to see current health 
                 Type an item's name to use a item in your inventory
                 Type hit to hit yourself
                 Type punch to punch yourself

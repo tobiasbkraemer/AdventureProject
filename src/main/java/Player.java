@@ -13,6 +13,10 @@ public class Player {
     public int getHealth () {
         return health;
     }
+    public Player setHealth(int health) {
+        this.health = this.health+health;
+        return null;
+    }
 
     public Room getCurrentRoom() {
         return currentRoom;
@@ -51,6 +55,7 @@ public class Player {
         inventory.add(item);
     }
 
+
     public Item removeItem(String name){
         for (Item item : inventory){
             if (item.getItemName().equals(name)){
@@ -59,6 +64,27 @@ public class Player {
             }
         }
         return null;
+    }
+    public Item getItem(String name) {
+        for (Item item : inventory) {
+            if (item.getItemName().equalsIgnoreCase(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+    public ReturnMessage eatFood (String itemName) {
+        Item item = getItem(itemName);
+        if ( item instanceof Food) {
+            health += ((Food) item).getHealthPoints();
+            removeItem(itemName);
+            return ReturnMessage.OK;
+        } else {
+            if (item!=null){
+                return ReturnMessage.CANT;
+            }
+            return ReturnMessage.NOT_FOUND;
+        }
     }
 }
 

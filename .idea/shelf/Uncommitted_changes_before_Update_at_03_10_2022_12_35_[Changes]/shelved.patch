@@ -1,0 +1,145 @@
+Index: src/main/java/Map.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Map {\nprivate Room starterRoom;\n\n    public Room getStarterRoom() {\n        return starterRoom;\n    }\n    public void createMap() {\n        Room room1 = new Room(\"room1\", \"You are in the navigation-room, here is dusty and there is spiderwebs in every corner. In the middle of the room there is a table with a map over the whole spaceship.\");\n        Room room2 = new Room(\"room2\", \"You are in the weapon arsenal, all kinds of weapons are covering the floor. Loads of guns and knifes but no ammo for the guns.\");\n        Room room3 = new Room(\"room3\", \"You are in the Cafeteria. Here smells like dogwater, and coffee beans.\");\n        Room room4 = new Room(\"room4\", \"You are in Med bay, here lies some old medicin... not sure if it works correctly anymore...\");\n        Room room5 = new Room(\"room5\", \"You are in the toilet, it stinks of old dogwater. There is a wierd sound coming from the toilet... prepare yourself!\");\n        Room room6 = new Room(\"room6\", \"You are in Shields, big shields everywhere on the walls... might be useful.\");\n        Room room7 = new Room(\"room7\", \"You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat!\");\n        Room room8 = new Room(\"room8\", \"You are in Storage, it is completely dark.\");\n        Room room9 = new Room(\"room9\", \"You are in the communication-room, there is a strange sound coming from the radio.\");\n        \n        room1.setEast(room2);\n        room1.setSouth(room4);\n        room1.setWest(null);\n        room1.setNorth(null);\n\n        room2.setWest(room1);\n        room2.setEast(room3);\n        room2.setNorth(null);\n        room2.setSouth(null);\n\n        room3.setWest(room2);\n        room3.setSouth(room6);\n        room3.setNorth(null);\n        room3.setEast(null);\n\n        room4.setNorth(room1);\n        room4.setSouth(room7);\n        room4.setWest(null);\n        room4.setEast(null);\n\n        room5.setEast(null);\n        room5.setWest(null);\n        room5.setNorth(null);\n        room5.setSouth(room8);\n\n        room6.setNorth(room3);\n        room6.setSouth(room9);\n        room6.setWest(null);\n        room6.setEast(null);\n\n        room7.setNorth(room4);\n        room7.setEast(room8);\n        room7.setWest(null);\n        room7.setSouth(null);\n\n        room8.setEast(room9);\n        room8.setWest(room7);\n        room8.setNorth(room5);\n        room8.setSouth(null);\n\n        room9.setNorth(room6);\n        room9.setEast(null);\n        room9.setSouth(null);\n        room9.setWest(room8);\n\n        starterRoom = room1;\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Map.java b/src/main/java/Map.java
+--- a/src/main/java/Map.java	(revision ace95ad08fea8eabed3276fd44c0cd594a589ffc)
++++ b/src/main/java/Map.java	(date 1664723172000)
+@@ -1,20 +1,21 @@
+ public class Map {
+-private Room starterRoom;
++    private Room currentRoom;
+ 
+-    public Room getStarterRoom() {
+-        return starterRoom;
++    public Room getCurrentRoom() {
++        return currentRoom;
+     }
+-    public void createMap() {
+-        Room room1 = new Room("room1", "You are in the navigation-room, here is dusty and there is spiderwebs in every corner. In the middle of the room there is a table with a map over the whole spaceship.");
+-        Room room2 = new Room("room2", "You are in the weapon arsenal, all kinds of weapons are covering the floor. Loads of guns and knifes but no ammo for the guns.");
+-        Room room3 = new Room("room3", "You are in the Cafeteria. Here smells like dogwater, and coffee beans.");
+-        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin... not sure if it works correctly anymore...");
+-        Room room5 = new Room("room5", "You are in the toilet, it stinks of old dogwater. There is a wierd sound coming from the toilet... prepare yourself!");
+-        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls... might be useful.");
+-        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat!");
+-        Room room8 = new Room("room8", "You are in Storage, it is completely dark.");
++    public void createRoom() {
++        Room room1 = new Room("room1", "You are in the Cafeteria. Here smells like dogwater, and coffee beans. There is a sound comming from the fridge.");
++        Room room2 = new Room("room2", "You are in the weapon arsenal, there is weapons on the ground, guns, swords, darts but no ammo.");
++        Room room3 = new Room("room3", "You are in the navigation-room, there is dust and spiderwebs everywhere, theres is papers on the counter.");
++        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin, not sure if it works correctly anymore.");
++        Room room5 = new Room("room5", "You are in the toilet, it stinks of dogwater. There is a wierd sound coming from the toilet.");
++        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls.");
++        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat.");
++        Room room8 = new Room("room8", "You are in Storage, it is completely dark. ");
+         Room room9 = new Room("room9", "You are in the communication-room, there is a strange sound coming from the radio.");
+-        
++
++
+         room1.setEast(room2);
+         room1.setSouth(room4);
+         room1.setWest(null);
+@@ -60,7 +61,5 @@
+         room9.setSouth(null);
+         room9.setWest(room8);
+ 
+-        starterRoom = room1;
+-
+-    }
+-}
++        currentRoom = room1;
++}}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8261a67f-1352-452f-9791-95808c399b70\" name=\"Changes\" comment=\"Added del 1 done\">\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Item.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Adventure.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Adventure.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Map.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Map.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Player.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Player.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Room.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Room.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" afterDir=\"false\" />\n    </list>\n    <list id=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" name=\"Changes by kjartanleander\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Adventure.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Adventure.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Player.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Player.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" afterDir=\"false\" />\n    </list>\n    <list id=\"da6f4491-23c0-4fee-a7c5-74bcca06a980\" name=\"Changes by Simon Bang Dessau\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Room.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Room.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"LineStatusTrackerManager\">\n    <file path=\"$PROJECT_DIR$/src/main/java/UserInterface.java\">\n      <ranges>\n        <range start1=\"1\" end1=\"1\" start2=\"1\" end2=\"2\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"4\" end1=\"8\" start2=\"5\" end2=\"6\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"10\" end1=\"10\" start2=\"8\" end2=\"9\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"15\" end1=\"19\" start2=\"14\" end2=\"17\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"21\" end1=\"23\" start2=\"19\" end2=\"20\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"26\" end1=\"27\" start2=\"23\" end2=\"25\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n        <range start1=\"28\" end1=\"32\" start2=\"26\" end2=\"32\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"33\" end1=\"37\" start2=\"33\" end2=\"39\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"38\" end1=\"42\" start2=\"40\" end2=\"46\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"43\" end1=\"47\" start2=\"47\" end2=\"53\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"49\" end1=\"50\" start2=\"55\" end2=\"56\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"52\" end1=\"52\" start2=\"58\" end2=\"61\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"60\" end1=\"60\" start2=\"69\" end2=\"75\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n        <range start1=\"63\" end1=\"63\" start2=\"78\" end2=\"87\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n        <range start1=\"64\" end1=\"65\" start2=\"88\" end2=\"89\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n        <range start1=\"68\" end1=\"68\" start2=\"92\" end2=\"93\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"70\" end1=\"70\" start2=\"95\" end2=\"113\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"72\" end1=\"73\" start2=\"115\" end2=\"116\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"75\" end1=\"75\" start2=\"118\" end2=\"119\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"77\" end1=\"78\" start2=\"121\" end2=\"122\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n      </ranges>\n    </file>\n    <file path=\"$PROJECT_DIR$/src/main/java/Adventure.java\">\n      <ranges>\n        <range start1=\"1\" end1=\"2\" start2=\"1\" end2=\"3\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"3\" end1=\"5\" start2=\"4\" end2=\"8\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"7\" end1=\"66\" start2=\"10\" end2=\"12\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"67\" end1=\"87\" start2=\"13\" end2=\"13\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"88\" end1=\"106\" start2=\"14\" end2=\"16\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n      </ranges>\n    </file>\n    <file path=\"$PROJECT_DIR$/src/main/java/Player.java\">\n      <ranges>\n        <range start1=\"1\" end1=\"1\" start2=\"1\" end2=\"33\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n        <range start1=\"2\" end1=\"3\" start2=\"34\" end2=\"35\" changelist=\"b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2\" />\n      </ranges>\n    </file>\n    <file path=\"$PROJECT_DIR$/src/main/java/Room.java\">\n      <ranges>\n        <range start1=\"0\" end1=\"0\" start2=\"0\" end2=\"2\" changelist=\"da6f4491-23c0-4fee-a7c5-74bcca06a980\" />\n        <range start1=\"7\" end1=\"8\" start2=\"9\" end2=\"10\" changelist=\"da6f4491-23c0-4fee-a7c5-74bcca06a980\" />\n        <range start1=\"56\" end1=\"56\" start2=\"58\" end2=\"64\" changelist=\"8261a67f-1352-452f-9791-95808c399b70\" />\n      </ranges>\n    </file>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2FJ0cejUjxLSCw3EJjaHlAXzldB\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8261a67f-1352-452f-9791-95808c399b70\" name=\"Changes\" comment=\"\" />\n      <created>1664194964373</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1664194964373</updated>\n      <workItem from=\"1664194967183\" duration=\"4714000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ace95ad08fea8eabed3276fd44c0cd594a589ffc)
++++ b/.idea/workspace.xml	(date 1664793313000)
+@@ -4,23 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added del 1 done">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
++    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+-    </list>
+-    <list id="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" name="Changes by kjartanleander" comment="">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+-    </list>
+-    <list id="da6f4491-23c0-4fee-a7c5-74bcca06a980" name="Changes by Simon Bang Dessau" comment="">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,54 +22,6 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="LineStatusTrackerManager">
+-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+-      <ranges>
+-        <range start1="1" end1="1" start2="1" end2="2" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="4" end1="8" start2="5" end2="6" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="10" end1="10" start2="8" end2="9" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="15" end1="19" start2="14" end2="17" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="21" end1="23" start2="19" end2="20" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="26" end1="27" start2="23" end2="25" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-        <range start1="28" end1="32" start2="26" end2="32" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="33" end1="37" start2="33" end2="39" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="38" end1="42" start2="40" end2="46" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="43" end1="47" start2="47" end2="53" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="49" end1="50" start2="55" end2="56" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="52" end1="52" start2="58" end2="61" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="60" end1="60" start2="69" end2="75" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-        <range start1="63" end1="63" start2="78" end2="87" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-        <range start1="64" end1="65" start2="88" end2="89" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-        <range start1="68" end1="68" start2="92" end2="93" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="70" end1="70" start2="95" end2="113" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="72" end1="73" start2="115" end2="116" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="75" end1="75" start2="118" end2="119" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="77" end1="78" start2="121" end2="122" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-      </ranges>
+-    </file>
+-    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
+-      <ranges>
+-        <range start1="1" end1="2" start2="1" end2="3" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="3" end1="5" start2="4" end2="8" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="7" end1="66" start2="10" end2="12" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="67" end1="87" start2="13" end2="13" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="88" end1="106" start2="14" end2="16" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-      </ranges>
+-    </file>
+-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+-      <ranges>
+-        <range start1="1" end1="1" start2="1" end2="33" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-        <range start1="2" end1="3" start2="34" end2="35" changelist="b02f5c40-67bb-45c6-a0fd-84ad7d72a5c2" />
+-      </ranges>
+-    </file>
+-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
+-      <ranges>
+-        <range start1="0" end1="0" start2="0" end2="2" changelist="da6f4491-23c0-4fee-a7c5-74bcca06a980" />
+-        <range start1="7" end1="8" start2="9" end2="10" changelist="da6f4491-23c0-4fee-a7c5-74bcca06a980" />
+-        <range start1="56" end1="56" start2="58" end2="64" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+-      </ranges>
+-    </file>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />

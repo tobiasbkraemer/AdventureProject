@@ -1,3 +1,25 @@
+Index: src/main/java/UserInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\n\npublic class UserInterface {\n    Scanner sc = new Scanner(System.in);\n    Adventure adventure = new Adventure();\n\n\n\n    public void startProgram() {\n        welcome();\n\n    }\n\n    public void welcome() {\n        System.out.println(\"-\".repeat(30)+\"\\n\"+\"Welcome on board the spaceship! \\n\"\n                + \"-\".repeat(30) + \"\\nWhere to go?\");\n        direction();\n\n    }\n\n    public void direction() {\n        adventure.createRoom();\n\n        String input = \"\";\n        while (!input.equals(\"exit\")) {\n            input = sc.nextLine();\n            switch (input) {\n                case \"s\":\n                    System.out.println(\"Going south\");\n                    adventure.goSouth();\n                    System.out.println(adventure.getCurrentRoom().getDescription());\n                    break;\n                case \"w\":\n                    System.out.println(\"Going west\");\n                    adventure.goWest();\n                    System.out.println(adventure.getCurrentRoom().getDescription());\n                    break;\n                case \"e\":\n                    System.out.println(\"Going east\");\n                    adventure.goEast();\n                    System.out.println(adventure.getCurrentRoom().getDescription());\n                    break;\n                case \"n\":\n                    System.out.println(\"Going north\");\n                    adventure.goNorth();\n                    System.out.println(adventure.getCurrentRoom().getDescription());\n                    break;\n                case \"look\":\n                    System.out.println(\"This is \"+adventure.getCurrentRoom().getName());\n                    System.out.println(adventure.getCurrentRoom().getDescription());\n                    break;\n                case \"exit\":\n                    System.out.println(\"Ending program...\");\n                    endProgram();\n                    break;\n                case \"die\":\n                    System.out.println(\"You die...\");\n                    endProgram();\n                    break;\n                case \"hit\":\n                    System.out.println(\"You hit yourself\");\n                    break;\n                default:\n                    System.out.println(\"Input invalid. Try again you moron.\");\n                    break;\n            }\n        }\n    }\n\n\n    public void endProgram() {\n        System.exit(0);\n        System.out.println(\"Ending program...\");\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/UserInterface.java b/src/main/java/UserInterface.java
+--- a/src/main/java/UserInterface.java	(revision 072b9c0c36ee7de6dc0499293eb4f5562081a848)
++++ b/src/main/java/UserInterface.java	(date 1664435030000)
+@@ -30,6 +30,11 @@
+                     adventure.goSouth();
+                     System.out.println(adventure.getCurrentRoom().getDescription());
+                     break;
++                case "south":
++                    System.out.println("Going south");
++                    adventure.goSouth();
++                    System.out.println(adventure.getCurrentRoom().getDescription());
++                    break;
+                 case "w":
+                     System.out.println("Going west");
+                     adventure.goWest();
 Index: .idea/workspace.xml
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
@@ -7,8 +29,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 --- a/.idea/workspace.xml	(revision 072b9c0c36ee7de6dc0499293eb4f5562081a848)
-+++ b/.idea/workspace.xml	(date 1664350359918)
-@@ -4,17 +4,8 @@
++++ b/.idea/workspace.xml	(date 1664723158000)
+@@ -4,17 +4,10 @@
      <option name="autoReloadType" value="SELECTIVE" />
    </component>
    <component name="ChangeListManager">
@@ -23,12 +45,14 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 -      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
 -      <change afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
 -      <change afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added del 1 done">
++    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Commit and åpush">
++      <change afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
      </list>
      <option name="SHOW_DIALOG" value="false" />
      <option name="HIGHLIGHT_CONFLICTS" value="true" />
-@@ -40,18 +31,18 @@
+@@ -40,18 +33,18 @@
      <option name="hideEmptyMiddlePackages" value="true" />
      <option name="showLibraryContents" value="true" />
    </component>
@@ -58,43 +82,106 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
    <component name="RecentsManager">
      <key name="MoveFile.RECENT_KEYS">
        <recent name="$PROJECT_DIR$/src/main" />
-@@ -67,6 +58,14 @@
+@@ -66,7 +59,17 @@
+       <option name="presentableId" value="Default" />
        <updated>1664194964373</updated>
        <workItem from="1664194967183" duration="4714000" />
-     </task>
-+    <task id="LOCAL-00001" summary="Added del 1 done">
-+      <created>1664274398663</created>
++      <workItem from="1664260679029" duration="1258000" />
++      <workItem from="1664347328472" duration="4009000" />
++    </task>
++    <task id="LOCAL-00001" summary="Commit and åpush">
++      <created>1664262092606</created>
 +      <option name="number" value="00001" />
 +      <option name="presentableId" value="LOCAL-00001" />
 +      <option name="project" value="LOCAL" />
-+      <updated>1664274398663</updated>
-+    </task>
++      <updated>1664262092606</updated>
+     </task>
 +    <option name="localTasksCounter" value="2" />
      <servers />
    </component>
    <component name="TypeScriptGeneratedFilesManager">
-@@ -83,4 +82,23 @@
+@@ -83,4 +86,8 @@
        </map>
      </option>
    </component>
 +  <component name="VcsManagerConfiguration">
-+    <MESSAGE value="Added del 1 done" />
-+    <option name="LAST_COMMIT_MESSAGE" value="Added del 1 done" />
-+  </component>
-+  <component name="XDebuggerManager">
-+    <breakpoint-manager>
-+      <breakpoints>
-+        <line-breakpoint enabled="true" type="java-method">
-+          <url>file://$PROJECT_DIR$/src/main/java/Room.java</url>
-+          <line>14</line>
-+          <properties class="Room" method="getDescription">
-+            <option name="EMULATED" value="true" />
-+            <option name="WATCH_EXIT" value="false" />
-+          </properties>
-+          <option name="timeStamp" value="1" />
-+        </line-breakpoint>
-+      </breakpoints>
-+    </breakpoint-manager>
++    <MESSAGE value="Commit and åpush" />
++    <option name="LAST_COMMIT_MESSAGE" value="Commit and åpush" />
 +  </component>
  </project>
 \ No newline at end of file
+Index: src/main/java/Map.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Map.java b/src/main/java/Map.java
+new file mode 100644
+--- /dev/null	(date 1664348801000)
++++ b/src/main/java/Map.java	(date 1664348801000)
+@@ -0,0 +1,65 @@
++public class Map {
++    private Room currentRoom;
++
++    public Room getCurrentRoom() {
++        return currentRoom;
++    }
++    public void createRoom() {
++        Room room1 = new Room("room1", "You are in the Cafeteria. Here smells like dogwater, and coffee beans. There is a sound comming from the fridge.");
++        Room room2 = new Room("room2", "You are in the weapon arsenal, there is weapons on the ground, guns, swords, darts but no ammo.");
++        Room room3 = new Room("room3", "You are in the navigation-room, there is dust and spiderwebs everywhere, theres is papers on the counter.");
++        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin, not sure if it works correctly anymore.");
++        Room room5 = new Room("room5", "You are in the toilet, it stinks of dogwater. There is a wierd sound coming from the toilet.");
++        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls.");
++        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat.");
++        Room room8 = new Room("room8", "You are in Storage, it is completely dark. ");
++        Room room9 = new Room("room9", "You are in the communication-room, there is a strange sound coming from the radio.");
++
++
++        room1.setEast(room2);
++        room1.setSouth(room4);
++        room1.setWest(null);
++        room1.setNorth(null);
++
++        room2.setWest(room1);
++        room2.setEast(room3);
++        room2.setNorth(null);
++        room2.setSouth(null);
++
++        room3.setWest(room2);
++        room3.setSouth(room6);
++        room3.setNorth(null);
++        room3.setEast(null);
++
++        room4.setNorth(room1);
++        room4.setSouth(room7);
++        room4.setWest(null);
++        room4.setEast(null);
++
++        room5.setEast(null);
++        room5.setWest(null);
++        room5.setNorth(null);
++        room5.setSouth(room8);
++
++        room6.setNorth(room3);
++        room6.setSouth(room9);
++        room6.setWest(null);
++        room6.setEast(null);
++
++        room7.setNorth(room4);
++        room7.setEast(room8);
++        room7.setWest(null);
++        room7.setSouth(null);
++
++        room8.setEast(room9);
++        room8.setWest(room7);
++        room8.setNorth(room5);
++        room8.setSouth(null);
++
++        room9.setNorth(room6);
++        room9.setEast(null);
++        room9.setSouth(null);
++        room9.setWest(room8);
++
++        currentRoom = room1;
++}}

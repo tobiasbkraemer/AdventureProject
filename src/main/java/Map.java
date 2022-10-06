@@ -19,7 +19,8 @@ public class Map {
         room1.setSouth(room4);
         room1.setWest(null);
         room1.setNorth(null);
-        room1.createFood("apple","may be giftig",-1);
+        room1.createFood("Apple","may be poisonous",-1);
+
 
         room2.setWest(room1);
         room2.setEast(room3);
@@ -64,11 +65,13 @@ public class Map {
         Item item1 = new Item("Map", "an old map over the spaceship");
         Item item2 = new Item("Flashlight", "great for dark rooms");
         Item item3 = new Item("Keys", "hanging on the wall, useful for opening door");
+        Item item4 = new Item("Medicine","lies on the table");
 
 
         room1.addItem(item1);
         room3.addItem(item2);
         room8.addItem(item3);
+        room4.addItem(item4);
 
         starterRoom = room1;
 

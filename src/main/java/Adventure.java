@@ -15,11 +15,18 @@ public class Adventure {
     public Room getCurrentRoom() {
         return player.getCurrentRoom();
     }
+    public Player setHealth(int health) {
+        return player.setHealth(health);
+    }
+    public Item getItem(String itemName) {
+        return player.getItem(itemName);
+    }
 
     public boolean go(String direction) {
         return player.move(direction);
     }
-
-
+public ReturnMessage playerEat (String itemName){
+        return player.eatFood(itemName);
+}
 }
 

@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added onsdag update 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_09_2022,_08_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_09_2022,_09_35_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_09_2022__08_49__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_09_2022__09_35__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
+    <list id="affa2170-24ba-4598-a603-9a0b7f921a89" name="Changes by Simon Bang Dessau" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +33,60 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="12" end1="13" start2="13" end2="14" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="15" end1="15" start2="16" end2="20" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="49" end1="50" start2="54" end2="55" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="52" end1="52" start2="57" end2="58" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="53" end1="56" start2="59" end2="62" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="62" end1="62" start2="68" end2="89" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="6" end1="7" start2="7" end2="8" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="17" end1="17" start2="18" end2="24" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="21" end1="23" start2="28" end2="31" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="6" end1="6" start2="7" end2="9" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="21" end1="23" start2="24" end2="24" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="26" end1="26" start2="27" end2="28" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="27" end1="28" start2="29" end2="29" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="29" end1="31" start2="30" end2="32" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="41" end1="42" start2="42" end2="43" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="62" end1="62" start2="63" end2="68" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="65" end1="67" start2="71" end2="73" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="71" end1="72" start2="77" end2="79" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="74" end1="74" start2="81" end2="82" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="75" end1="76" start2="83" end2="84" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="79" end1="80" start2="87" end2="88" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="84" end1="84" start2="92" end2="94" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="85" end1="86" start2="95" end2="96" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="89" end1="90" start2="99" end2="100" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="93" end1="94" start2="103" end2="117" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="98" end1="101" start2="121" end2="124" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="105" end1="106" start2="128" end2="128" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="111" end1="112" start2="133" end2="134" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="130" end1="131" start2="152" end2="153" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="148" end1="148" start2="170" end2="174" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,6 +113,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="AdventureProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

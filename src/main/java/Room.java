@@ -71,6 +71,14 @@ public class Room {
     public void addItem(Item item) {
         items.add(item);
     }
+    public Item getItem(String name) {
+        for (Item item : items) {
+            if (item.getItemName().equals(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
 
     public ArrayList<Item> getRoomItems() {
         return items;
@@ -79,7 +87,7 @@ public class Room {
 
     public Item removeItem(String name){
         for (Item item : items){
-            if (item.getItemName().equals(name)){
+            if (item.getItemName().equalsIgnoreCase(name)){
                 items.remove(item);
                 return item;
             }
