@@ -2,9 +2,10 @@ public class Adventure {
     private Player player;
     private Map map = new Map();
 
+
     public Adventure() {
         map.createMap();
-        player = new Player();
+        player = new Player(10);
         player.setCurrentRoom(map.getStarterRoom());
     }
 

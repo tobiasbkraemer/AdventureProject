@@ -5,6 +5,8 @@ public class UserInterface {
     Scanner sc = new Scanner(System.in);
 
     private Adventure adventure;
+    private Food food;
+    private Player player;
 
     public void startProgram() {
         adventure = new Adventure();
@@ -26,8 +28,8 @@ public class UserInterface {
             String userInput = "";
             String command = inputSplit[0];
 
-            if (inputSplit.length > 1){
-                direction = inputSplit[1];
+            if (inputSplit.length > 1) {
+                userInput = inputSplit[1];
             }
 
             switch (command) {
@@ -67,13 +69,14 @@ public class UserInterface {
                 case "look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
                     System.out.println(adventure.getCurrentRoom().getRoomDescription());
-                    if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()){
-                        for (Item item : adventure.getPlayer().getCurrentRoom().getRoomItems()){
+                    if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()) {
+                        for (Item item : adventure.getPlayer().getCurrentRoom().getRoomItems()) {
                             System.out.println(item.getItemName() + ", " + item.getItemDescription());
                         }
                     }
                     break;
-                case "help", "help me", "instruction", "instructions", "command", "commands":
+
+                case "help", "instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
 
@@ -82,7 +85,7 @@ public class UserInterface {
                     if (itemTaken == null) {
                         System.out.println("The item doesn't exist");
                     } else {
-                        System.out.println("You grabbed " + itemTaken.getItemName()+" for your inventory");
+                        System.out.println("You grabbed " + itemTaken.getItemName() + " for your inventory");
                         adventure.getPlayer().addItem(itemTaken);
                     }
                     break;
@@ -94,7 +97,7 @@ public class UserInterface {
                     if (itemDropped == null) {
                         System.out.println("The item doesn't exist");
                     } else {
-                        System.out.println("You just dropped " + itemDropped.getItemName()+ " from you inventory");
+                        System.out.println("You just dropped " + itemDropped.getItemName() + " from your inventory");
                         adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
                     }
                     break;
@@ -118,13 +121,12 @@ public class UserInterface {
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
-                        System.out.println("\"Items in your inventory: "+"\n");
-                        for (Item item : adventure.getPlayer().getInventory()){
-                            System.out.println(item.getItemName() + ", " + item.getItemDescription());
+                        System.out.println("\"Items in your inventory: " + "\n");
+                        for (Item item : adventure.getPlayer().getInventory()) {
+                            System.out.println(item.getItemName());
                         }
                     }
                     break;
-
 
                 case "exit":
                     System.out.println("Ending program...");

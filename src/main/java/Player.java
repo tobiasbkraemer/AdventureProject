@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private int currentHealth;
     private int health;
     private final int maxHealth = 10;
 
@@ -10,7 +11,7 @@ public class Player {
         this.health=health;
     }
 
-    public int getHealth () {
+    public int getHealth() {
         return health;
     }
     public Player setHealth(int health) {
@@ -51,14 +52,14 @@ public class Player {
         return inventory;
     }
 
-    public void addItem(Item item){
+    public void addItem(Item item) {
         inventory.add(item);
     }
 
 
-    public Item removeItem(String name){
-        for (Item item : inventory){
-            if (item.getItemName().equals(name)){
+    public Item removeItem(String name) {
+        for (Item item : inventory) {
+            if (item.getItemName().equalsIgnoreCase(name)) {
                 inventory.remove(item);
                 return item;
             }
