@@ -35,6 +35,7 @@ public class Map {
         room4.setSouth(room7);
         room4.setWest(null);
         room4.setEast(null);
+        room4.createFood("Pills","effect unknown",+1);
 
         room5.setEast(null);
         room5.setWest(null);
@@ -64,13 +65,20 @@ public class Map {
         Item item1 = new Item("Map", "an old map over the spaceship");
         Item item2 = new Item("Flashlight", "great for dark rooms");
         Item item3 = new Item("Keys", "hanging on the wall, useful for opening door");
-        Item item4 = new Item("Medicine","lies on the table");
+        Item item4 = new Item("Pills","lies on the table");
+        Item item5 = new Item("Riffle","without any ammunition");
+        Item item6 = new Item("Axe","hanging on the wall");
+        Item item7 = new Item("Ammunition","might become usefull");
 
 
         room1.addItem(item1);
-        room3.addItem(item2);
+        room6.addItem(item2);
         room8.addItem(item3);
         room4.addItem(item4);
+        room3.addItem(item5);
+        room3.addItem(item6);
+        room8.addItem(item7);
+
 
         starterRoom = room1;
 
