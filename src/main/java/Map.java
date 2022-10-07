@@ -5,27 +5,26 @@ public class Map {
     ArrayList<Item> items = new ArrayList<>();
 
     public void createMap() {
-        Room room1 = new Room("room1", "You are in the navigation-room, here is dusty and there is spiderwebs in every corner. In the middle of the room there is a table with a map over the whole spaceship.");
-        Room room2 = new Room("room2", "You are in the weapon arsenal, all kinds of weapons are covering the floor. Loads of guns and knifes but no ammo for the guns.");
-        Room room3 = new Room("room3", "You are in the Cafeteria. Here smells like dogwater, and coffee beans.");
-        Room room4 = new Room("room4", "You are in Med bay, here lies some old medicin... not sure if it works correctly anymore...");
-        Room room5 = new Room("room5", "You are in the toilet, it stinks of old dogwater. There is a wierd sound coming from the toilet... prepare yourself!");
-        Room room6 = new Room("room6", "You are in Shields, big shields everywhere on the walls... might be useful.");
-        Room room7 = new Room("room7", "You are in lower engine. You hear some metallic creeks from the ceiling, get ready for combat!");
-        Room room8 = new Room("room8", "You are in Storage, it is completely dark.");
-        Room room9 = new Room("room9", "You are in the communication-room, there is a strange sound coming from the radio.");
+        Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map over the whole spaceship.");
+        Room room2 = new Room("Cafeteria", "This is the Cafeteria. It's surprisingly clean in here, but there is a weird smell. On the table in front of you lies an apple. Looks suspicious");
+        Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a semi automatik riffle hanging on the wall, next to a big axe.");
+        Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. We don't know the effect, but they could be useful.");
+        Room room5 = new Room("Toilet", "This is the toilets, it stinks of dogwater. There is a weird sound coming from the toilet.");
+        Room room6 = new Room("Electrical", "This is electrical. It seems like this room connect and give power to the rest of the spaceship.");
+        Room room7 = new Room("Engine", "This is the engine room. A loud constant noise fills the room, as the engine is working at maximum speed.");
+        Room room8 = new Room("Storage", "Even though it is completely dark in Storage, you can almost feel the spiderwebs hanging from the ceiling and dust covering every surface. There may be some useful things in here, but it's too dark to see.");
+        Room room9 = new Room("Communication", "You are in the communication-room. This is where all contact in and out the spaceship takes place.");
 
         room1.setEast(room2);
         room1.setSouth(room4);
         room1.setWest(null);
         room1.setNorth(null);
-        room1.createFood("Apple","may be poisonous",-1);
-
 
         room2.setWest(room1);
         room2.setEast(room3);
         room2.setNorth(null);
         room2.setSouth(null);
+        room2.createFood("Apple","may be poisonous or healthy",-1);
 
         room3.setWest(room2);
         room3.setSouth(room6);
