@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added Story update 1.0" />
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added Story update 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander">
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="affa2170-24ba-4598-a603-9a0b7f921a89" name="Changes by Simon Bang Dessau" comment="" />
+    <list id="affa2170-24ba-4598-a603-9a0b7f921a89" name="Changes by Simon Bang Dessau" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +35,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+        <range start1="104" end1="105" start2="105" end2="107" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="106" end1="107" start2="108" end2="109" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+        <range start1="109" end1="116" start2="111" end2="114" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+        <range start1="118" end1="118" start2="116" end2="138" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Map.java">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="8" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="9" end1="11" start2="9" end2="11" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+        <range start1="12" end1="13" start2="12" end2="13" changelist="affa2170-24ba-4598-a603-9a0b7f921a89" />
+        <range start1="32" end1="32" start2="32" end2="34" changelist="27b99ca6-0280-4079-a885-3806080f6d4c" />
+        <range start1="64" end1="65" start2="66" end2="67" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="67" end1="69" start2="69" end2="71" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+        <range start1="79" end1="80" start2="81" end2="82" changelist="8261a67f-1352-452f-9791-95808c399b70" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665130810516</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changes by kjartanleander">
+      <created>1665131073439</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665131073439</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes by kjartanleander">
+      <created>1665131184486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665131184488</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

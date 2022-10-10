@@ -102,7 +102,8 @@ public class UserInterface {
                     }
                     break;
                 case "eat", "Eat":
-                    ReturnMessage result = adventure.playerEat(userInput);
+                    ReturnMessage result;
+                    result = adventure.playerEat(userInput);
                     switch (result) {
                         case OK:
                             System.out.println("You ate " + userInput);

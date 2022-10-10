@@ -62,11 +62,11 @@ public class Map {
         room9.setSouth(null);
         room9.setWest(room8);
 
-        Item item1 = new Item("Map", "an old map over the spaceship");
+        /*Item item1 = new Item("Map", "an old map over the spaceship");
         Item item2 = new Item("Flashlight", "great for dark rooms");
         Item item3 = new Item("Keys", "hanging on the wall, useful for opening door");
-        Item item4 = new Item("Pills","lies on the table");
-        Item item5 = new Item("Riffle","without any ammunition");
+        Item item4 = new Item("Pills","lies on the table",-5);
+        Item item5 = new Item("Rifle","without any ammunition");
         Item item6 = new Item("Axe","hanging on the wall");
         Item item7 = new Item("Ammunition","might become usefull");
 
@@ -77,7 +77,7 @@ public class Map {
         room4.addItem(item4);
         room3.addItem(item5);
         room3.addItem(item6);
-        room8.addItem(item7);
+        room8.addItem(item7);*/
 
 
         starterRoom = room1;

@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private ArrayList<Weapon> weapons = new ArrayList<>();
     private int currentHealth;
     private int health;
     private final int maxHealth = 10;
@@ -52,8 +53,16 @@ public class Player {
         return inventory;
     }
 
+    public ArrayList<Weapon> getWeaponEquipped() {
+        return weapons;
+    }
+
     public void addItem(Item item) {
         inventory.add(item);
+    }
+
+    public void addWeapon (Weapon weapon) {
+        weapons.add(weapon);
     }
 
 
@@ -74,10 +83,43 @@ public class Player {
         }
         return null;
     }
+
+    public Weapon unequipWeapon(String name) {
+        for (Weapon weapon : weapons) {
+            if (weapon.getItemName().equalsIgnoreCase(name)) {
+                weapons.remove(weapon);
+                return weapon;
+            }
+        }
+        return null;
+    }
+    public Weapon getWeapons(String name) {
+        for (Weapon weapon : weapons) {
+            if (weapon.getItemName().equalsIgnoreCase(name)) {
+                return weapon;
+            }
+        }
+        return null;
+    }
+
     public ReturnMessage eatFood (String itemName) {
         Item item = getItem(itemName);
         if ( item instanceof Food) {
             health += ((Food) item).getHealthPoints();
+            removeItem(itemName);
+            return ReturnMessage.OK;
+        } else {
+            if (item!=null){
+                return ReturnMessage.CANT;
+            }
+            return ReturnMessage.NOT_FOUND;
+        }
+    }
+
+    public ReturnMessage equipWeapon (String itemName) {
+        Item item = getItem(itemName);
+        if ( item instanceof Weapon) {
+            health += ((Weapon) item).getHealthPoints();
             removeItem(itemName);
             return ReturnMessage.OK;
         } else {

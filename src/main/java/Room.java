@@ -9,6 +9,7 @@ public class Room {
     private String description;
 
     private ArrayList <Item> items = new ArrayList<>();
+    //private ArrayList <Weapon> weapons = new ArrayList<>();
 
 
     public Room(String name, String description) {
@@ -68,6 +69,11 @@ public class Room {
         addItem(food);
     }
 
+    public void createWeapon (String name, String description, int healthPoints) {
+        Weapon weapon = new Weapon(name, description,healthPoints);
+        addItem(weapon);
+    }
+
     public void addItem(Item item) {
         items.add(item);
     }
@@ -94,4 +100,14 @@ public class Room {
         }
         return null;
     }
+
+    /*public Weapon removeWeapon(String name){
+        for (Weapon weapon : weapons){
+            if (weapon.getItemName().equalsIgnoreCase(name)){
+                weapons.remove(weapon);
+                return weapon;
+            }
+        }
+        return null;
+    }*/
 }
