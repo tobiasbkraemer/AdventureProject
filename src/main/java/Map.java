@@ -7,8 +7,8 @@ public class Map {
     public void createMap() {
         Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map over the whole spaceship.");
         Room room2 = new Room("Cafeteria", "This is the Cafeteria. It's surprisingly clean in here, but there is a weird smell. On the table in front of you lies an apple. Looks suspicious");
-        Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a semi automatik riffle hanging on the wall, next to a big axe.");
-        Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. We don't know the effect, but they could be useful.");
+        Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a rifle hanging on the wall, next to a big axe.");
+        Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. the label is teared off, cant read the effects, but they could be useful.");
         Room room5 = new Room("Toilet", "This is the toilets, it stinks of dogwater. There is a weird sound coming from the toilet.");
         Room room6 = new Room("Electrical", "This is electrical. It seems like this room connect and give power to the rest of the spaceship.");
         Room room7 = new Room("Engine", "This is the engine room. A loud constant noise fills the room, as the engine is working at maximum speed.");
@@ -30,6 +30,8 @@ public class Map {
         room3.setSouth(room6);
         room3.setNorth(null);
         room3.setEast(null);
+        room3.createWeapon("Rifle","causes 2 damage",-2);
+        room3.createWeapon("Axe","causes 3 damage",-3);
 
         room4.setNorth(room1);
         room4.setSouth(room7);

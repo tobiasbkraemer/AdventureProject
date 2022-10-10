@@ -6,6 +6,7 @@ public class UserInterface {
 
     private Adventure adventure;
     private Food food;
+    private Weapon weapon;
     private Player player;
 
     public void startProgram() {
@@ -105,16 +106,34 @@ public class UserInterface {
                     ReturnMessage result;
                     result = adventure.playerEat(userInput);
                     switch (result) {
-                        case OK:
+                        case OK -> {
                             System.out.println("You ate " + userInput);
                             System.out.println("Your health is now at: " + adventure.getPlayer().getHealth());
-                            break;
-                        case CANT:
-                            System.out.println(userInput + " is not edible");
-                            break;
-                        case NOT_FOUND:
-                            System.out.println(userInput + " cant be found in your inventory or room");
-                            break;
+                        }
+                        case CANT -> System.out.println(userInput + " is not edible");
+                        case NOT_FOUND -> System.out.println(userInput + " cant be found in your inventory or room");
+                    }
+                    break;
+
+                case "equip":
+                    result = adventure.playerEquip(userInput);
+                    switch (result) {
+                        case OK -> {
+                            System.out.println("you equipped" + userInput);
+                            System.out.println(weapon.getDescription());
+                        }
+                        case CANT -> System.out.println(userInput + " cant be equipped");
+                        case NOT_FOUND -> System.out.println(userInput + " cant be found in your inventory");
+                    }
+                    break;
+
+                case "unequip":
+                    Weapon weaponUnequipped = adventure.getPlayer().removeWeapon(userInput);
+                    if (weaponUnequipped == null) {
+                        System.out.println("Weapon is not equipped");
+                    } else {
+                        System.out.println("You unequipped " + weaponUnequipped.getItemName() + " to your inventory");
+                        adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
                     }
                     break;
 
