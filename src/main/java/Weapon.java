@@ -12,7 +12,6 @@ public class Weapon extends Item {
     public int getHealthPoints() {
         return healthPoints;
     }
-    public String getDescription () {
-        return getItemDescription();
-    }
+
+
 }

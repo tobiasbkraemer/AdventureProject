@@ -37,5 +37,17 @@ public class Adventure {
         return player.equipWeapon(itemName);
     }
 
+    public ReturnMessage playerUnEquip() {
+        return player.unEquipWeapon();
+    }
+
+    public Item playerTakeItem (String itemName) {
+        return player.takeItem(itemName);
+    }
+
+    public Item playerDropItem (String itemName) {
+        return player.dropItem(itemName);
+    }
+
 }
 

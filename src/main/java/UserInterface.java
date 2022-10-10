@@ -82,24 +82,21 @@ public class UserInterface {
                     break;
 
                 case "take":
-                    Item itemTaken = adventure.getPlayer().getCurrentRoom().removeItem(userInput);
+                    Item itemTaken = adventure.playerTakeItem(userInput);
                     if (itemTaken == null) {
                         System.out.println("The item doesn't exist");
                     } else {
                         System.out.println("You grabbed " + itemTaken.getItemName() + " for your inventory");
-                        adventure.getPlayer().addItem(itemTaken);
                     }
                     break;
 
-                
 
                 case "drop":
-                    Item itemDropped = adventure.getPlayer().removeItem(userInput);
+                    Item itemDropped = adventure.playerDropItem(userInput);
                     if (itemDropped == null) {
                         System.out.println("The item doesn't exist");
                     } else {
                         System.out.println("You just dropped " + itemDropped.getItemName() + " from your inventory");
-                        adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
                     }
                     break;
                 case "eat", "Eat":
@@ -127,13 +124,14 @@ public class UserInterface {
                     }
                     break;
 
-                case "unequip":
-                    Weapon weaponUnequipped = adventure.getPlayer().removeWeapon(userInput);
-                    if (weaponUnequipped == null) {
-                        System.out.println("Weapon is not equipped");
-                    } else {
-                        System.out.println("You unequipped " + weaponUnequipped.getItemName() + " to your inventory");
-                        adventure.getPlayer().getCurrentRoom().addItem(itemDropped);
+                case "unequip","ueq":
+                    result = adventure.playerUnEquip();
+                    switch (result) {
+                        case OK -> {
+                            System.out.println("you unequipped " + userInput);
+                        }
+                        case CANT -> System.out.println(userInput + " cant be unequipped");
+                        case NOT_FOUND -> System.out.println(userInput + " cant be found in your inventory");
                     }
                     break;
 
@@ -145,6 +143,15 @@ public class UserInterface {
                         for (Item item : adventure.getPlayer().getInventory()) {
                             System.out.println(item.getItemName());
                         }
+                    }
+                    break;
+
+                case "ei":
+                    if (adventure.getPlayer().getEquippedWeapon()==null) {
+                        System.out.println("You haven't equipped anything :(");
+                    } else {
+                        System.out.println("\"Items in your inventory: " + "\n");
+                        System.out.println(adventure.getPlayer().getEquippedWeapon().getItemName());
                     }
                     break;
 

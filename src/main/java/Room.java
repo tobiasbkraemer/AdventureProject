@@ -9,7 +9,6 @@ public class Room {
     private String description;
 
     private ArrayList <Item> items = new ArrayList<>();
-    //private ArrayList <Weapon> weapons = new ArrayList<>();
 
 
     public Room(String name, String description) {
