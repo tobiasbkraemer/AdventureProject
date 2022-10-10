@@ -5,12 +5,12 @@ public class Map {
     ArrayList<Item> items = new ArrayList<>();
 
     public void createMap() {
-        Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map over the whole spaceship.");
+        Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map over the spaceship.");
         Room room2 = new Room("Cafeteria", "This is the Cafeteria. It's surprisingly clean in here, but there is a weird smell. On the table in front of you lies an apple. Looks suspicious");
         Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a rifle hanging on the wall, next to a big axe.");
         Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. the label is teared off, cant read the effects, but they could be useful.");
         Room room5 = new Room("Toilet", "This is the toilets, it stinks of dogwater. There is a weird sound coming from the toilet.");
-        Room room6 = new Room("Electrical", "This is electrical. It seems like this room connect and give power to the rest of the spaceship.");
+        Room room6 = new Room("Electrical", "This is electrical. It looks like the powersource to the spaceship.");
         Room room7 = new Room("Engine", "This is the engine room. A loud constant noise fills the room, as the engine is working at maximum speed.");
         Room room8 = new Room("Storage", "Even though it is completely dark in Storage, you can almost feel the spiderwebs hanging from the ceiling and dust covering every surface. There may be some useful things in here, but it's too dark to see.");
         Room room9 = new Room("Communication", "You are in the communication-room. This is where all contact in and out the spaceship takes place.");
