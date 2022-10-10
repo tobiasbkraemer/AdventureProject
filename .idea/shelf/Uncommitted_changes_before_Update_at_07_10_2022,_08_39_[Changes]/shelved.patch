@@ -1,0 +1,63 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8261a67f-1352-452f-9791-95808c399b70\" name=\"Changes\" comment=\"Added onsdag update 1.0\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/UserInterface.java\" afterDir=\"false\" />\n    </list>\n    <list id=\"27b99ca6-0280-4079-a885-3806080f6d4c\" name=\"Changes by kjartanleander\" comment=\"Changes by kjartanleander\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"MIXED\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2FJ0cejUjxLSCw3EJjaHlAXzldB\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8261a67f-1352-452f-9791-95808c399b70\" name=\"Changes\" comment=\"\" />\n      <created>1664194964373</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1664194964373</updated>\n      <workItem from=\"1664194967183\" duration=\"4714000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Tilføjet item class og flyttet rundt samt tilføjet flere commands.\">\n      <created>1664443932166</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664443932166</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Tilføjet item class og flyttet rundt samt tilføjet flere commands.\">\n      <created>1664733532630</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664733532630</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Added sunday update 2.0\">\n      <created>1664794433284</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664794433284</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Added sunday update 2.0\">\n      <created>1664794464350</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664794464350</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Added sunday push\">\n      <created>1664794518315</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664794518315</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Changes by Simon Bang Dessau\">\n      <created>1664794531230</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664794531230</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Added monday update 1.0\">\n      <created>1664794709750</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664794709751</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Added monday update 2.0\">\n      <created>1664807754537</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664807754537</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Added weaksauce\">\n      <created>1664807774411</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664807774411</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Added SImon push\">\n      <created>1664807803701</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664807803702</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Added onsdag update 1.0\">\n      <created>1664963747189</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664963747191</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Changes by kjartanleander\">\n      <created>1664963762625</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1664963762625</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"13\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Tilføjet item class og flyttet rundt samt tilføjet flere commands.\" />\n    <MESSAGE value=\"Added sunday update 2.0\" />\n    <MESSAGE value=\"Added sunday push\" />\n    <MESSAGE value=\"Changes by Simon Bang Dessau\" />\n    <MESSAGE value=\"Added monday update 1.0\" />\n    <MESSAGE value=\"Added monday update 2.0\" />\n    <MESSAGE value=\"Added weaksauce\" />\n    <MESSAGE value=\"Added SImon push\" />\n    <MESSAGE value=\"Added onsdag update 1.0\" />\n    <MESSAGE value=\"Changes by kjartanleander\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes by kjartanleander\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b6ff93e1edc4069f052e768264f3a550c1356356)
++++ b/.idea/workspace.xml	(date 1665124733360)
+@@ -4,9 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added onsdag update 1.0">
++    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added Food class 2.0">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+     </list>
+     <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -145,7 +144,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1664963762625</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="Added items Final">
++      <created>1664965989368</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1664965989368</updated>
++    </task>
++    <task id="LOCAL-00014" summary="Added Food class">
++      <created>1664967338725</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1664967338725</updated>
++    </task>
++    <task id="LOCAL-00015" summary="Added Food class 2.0">
++      <created>1664968821228</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1664968821228</updated>
++    </task>
++    <option name="localTasksCounter" value="16" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -173,6 +193,9 @@
+     <MESSAGE value="Added SImon push" />
+     <MESSAGE value="Added onsdag update 1.0" />
+     <MESSAGE value="Changes by kjartanleander" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Changes by kjartanleander" />
++    <MESSAGE value="Added items Final" />
++    <MESSAGE value="Added Food class" />
++    <MESSAGE value="Added Food class 2.0" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added Food class 2.0" />
+   </component>
+ </project>
+\ No newline at end of file
