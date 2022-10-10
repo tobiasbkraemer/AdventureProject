@@ -31,7 +31,7 @@ public class Player {
 
     public Item takeItem(String itemName) {
         for(Item item : currentRoom.getRoomItems()) {
-            if(item.getItemName().equals(itemName)) {
+            if(item.getItemName().equalsIgnoreCase(itemName)) {
                 inventory.add(item);
                 currentRoom.removeItem(itemName);
                 return item;
@@ -42,7 +42,7 @@ public class Player {
 
     public Item dropItem (String itemName) {
         for (Item item : inventory) {
-            if(item.getItemName().equals(itemName)) {
+            if(item.getItemName().equalsIgnoreCase(itemName)) {
                 currentRoom.addItem(item);
                 inventory.remove(item);
                 return item;

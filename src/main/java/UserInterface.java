@@ -146,11 +146,11 @@ public class UserInterface {
                     }
                     break;
 
-                case "ei":
+                case "weapons","Weapons","ei":
                     if (adventure.getPlayer().getEquippedWeapon()==null) {
                         System.out.println("You haven't equipped anything :(");
                     } else {
-                        System.out.println("\"Items in your inventory: " + "\n");
+                        System.out.println("Weapons you have equipped: ");
                         System.out.println(adventure.getPlayer().getEquippedWeapon().getItemName());
                     }
                     break;
