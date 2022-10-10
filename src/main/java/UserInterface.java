@@ -112,12 +112,12 @@ public class UserInterface {
                     }
                     break;
 
-                case "equip":
+                case "equip","eq":
                     result = adventure.playerEquip(userInput);
                     switch (result) {
                         case OK -> {
-                            System.out.println("you equipped" + userInput);
-                            System.out.println(weapon.getDescription());
+                            System.out.println("you equipped " + userInput);
+                            adventure.getPlayer().equipWeapon(userInput);
                         }
                         case CANT -> System.out.println(userInput + " cant be equipped");
                         case NOT_FOUND -> System.out.println(userInput + " cant be found in your inventory");
