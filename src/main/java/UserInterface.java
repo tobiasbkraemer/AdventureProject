@@ -34,28 +34,28 @@ public class UserInterface {
             }
 
             switch (command) {
-                case "s", "walk south", "south", "go south":
+                case "s", "S", "south", "South":
                     if (adventure.go("south")) {
                         System.out.println("Going south" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "w", "west", "go west", "walk west":
+                case "w", "west", "West", "W":
                     if (adventure.go("west")) {
                         System.out.println("Going west" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "e", "east", "go east", "walk east":
+                case "e","E", "East", "east":
                     if (adventure.go("east")) {
                         System.out.println("Going east" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "n", "north", "go north", "walk north":
+                case "n", "north", "North", "N":
                     if (adventure.go("north")) {
                         System.out.println("Going north" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
@@ -63,11 +63,11 @@ public class UserInterface {
                     }
                     break;
 
-                case "health", "hp":
+                case "health", "hp","Hp","Health":
                     System.out.println("Currently you have " + adventure.getPlayer().getHealth() + " health");
                     break;
 
-                case "look":
+                case "look","Look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
                     System.out.println(adventure.getCurrentRoom().getRoomDescription());
                     if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()) {
@@ -77,11 +77,11 @@ public class UserInterface {
                     }
                     break;
 
-                case "help", "instruction", "instructions", "command", "commands":
+                case "help","Help","instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
 
-                case "take":
+                case "take","Take":
                     Item itemTaken = adventure.playerTakeItem(userInput);
                     if (itemTaken == null) {
                         System.out.println("The item doesn't exist");
@@ -91,7 +91,7 @@ public class UserInterface {
                     break;
 
 
-                case "drop":
+                case "drop","Drop":
                     Item itemDropped = adventure.playerDropItem(userInput);
                     if (itemDropped == null) {
                         System.out.println("The item doesn't exist");
@@ -112,7 +112,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "equip","eq":
+                case "equip","Equip","eq","Eq":
                     result = adventure.playerEquip(userInput);
                     switch (result) {
                         case OK -> {
@@ -124,7 +124,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "unequip","ueq":
+                case "unequip","Unequip","ueq":
                     result = adventure.playerUnEquip();
                     switch (result) {
                         case OK -> {
@@ -135,7 +135,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "inventory", "inv":
+                case "inventory", "inv","Inv","Inventory":
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
@@ -155,27 +155,27 @@ public class UserInterface {
                     }
                     break;
 
-                case "exit":
+                case "exit","Exit":
                     System.out.println("Ending program...");
                     endProgram();
                     break;
-                case "die":
+                case "die","Die":
                     System.out.println("You commit Suicide...");
                     endProgram();
                     break;
-                case "hit":
+                case "hit","Hit":
                     //TODO Minus 1 health
                     System.out.println("You hit yourself");
                     break;
-                case "punch":
+                case "punch","Punch":
                     //TODO Minus 1 health
                     System.out.println("You punch yourself");
                     break;
-                case "fart":
+                case "fart","Fart":
                     //TODO Make 10/100 chance of shart which results in death
                     System.out.println("You farted");
                     break;
-                case "spit":
+                case "spit","Spit":
                     System.out.println("You spit on yourself");
                     break;
                 default:
@@ -189,15 +189,18 @@ public class UserInterface {
     public void showHelp() {
         System.out.println("""
                 Directions:
-                Type s, south, go south, walk south to go south
-                Type n, north, go north, walk north to go north
-                Type w, west, go west, walk west to go west
-                type e, east, go east, walk east to go east
+                Type s, S, south, South to go south
+                Type n, N, north, North to go north
+                Type w, W, west, West to go west
+                type e, E, east, East to go east
                                 
                 Commands:
                 Type look to see what room you are in, and a description of your surroundings
                 Type exit or die to exit the game
                 Type eat to eat a food
+                Type Equip followed by a weapon to equip it
+                Type Unequip followed by a enquipped weapon to unequip it
+                Type Weapons to see equipped weapons
                 Type inv to see inventory
                 Type drop to drop a item
                 Type health to see current health 

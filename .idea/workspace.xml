@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="ændret i ei">
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="ignorelowercase på take og drop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
@@ -72,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664194964373</updated>
       <workItem from="1664194967183" duration="4714000" />
+      <workItem from="1665470506986" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="Tilføjet item class og flyttet rundt samt tilføjet flere commands.">
       <created>1664443932166</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665408533354</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="ignorelowercase på take og drop">
+      <created>1665409700515</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665409700515</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +267,8 @@
     <MESSAGE value="Update på take, drop, equip, unequip , inv og ei" />
     <MESSAGE value="Changes by kjartanleander" />
     <MESSAGE value="ændret i ei" />
-    <option name="LAST_COMMIT_MESSAGE" value="ændret i ei" />
+    <MESSAGE value="ignorelowercase på take og drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignorelowercase på take og drop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
