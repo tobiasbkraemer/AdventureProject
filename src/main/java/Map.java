@@ -19,26 +19,26 @@ public class Map {
         room1.setSouth(room4);
         room1.setWest(null);
         room1.setNorth(null);
-        room1.createWeapon("Knife","pointy",-5);
+        room1.createWeapon("Knife", "pointy", -5);
 
         room2.setWest(room1);
         room2.setEast(room3);
         room2.setNorth(null);
         room2.setSouth(null);
-        room2.createFood("Apple","may be poisonous or healthy",-1);
+        room2.createFood("Apple", "may be poisonous or healthy", -1);
 
         room3.setWest(room2);
         room3.setSouth(room6);
         room3.setNorth(null);
         room3.setEast(null);
-        room3.createWeapon("Rifle","causes 2 damage",-2);
-        room3.createWeapon("Axe","causes 3 damage",-3);
+        room3.createWeapon("Rifle", "causes 2 damage", -2);
+        room3.createWeapon("Axe", "causes 3 damage", -3);
 
         room4.setNorth(room1);
         room4.setSouth(room7);
         room4.setWest(null);
         room4.setEast(null);
-        room4.createFood("Pills","effect unknown",+1);
+        room4.createFood("Pills", "effect unknown", +1);
 
         room5.setEast(null);
         room5.setWest(null);

@@ -48,7 +48,7 @@ public class UserInterface {
                         System.out.println("The path is blocked");
                     }
                     break;
-                case "e","E", "East", "east":
+                case "e", "E", "East", "east":
                     if (adventure.go("east")) {
                         System.out.println("Going east" + "\n" + adventure.getCurrentRoom().getRoomDescription());
                     } else {
@@ -63,11 +63,11 @@ public class UserInterface {
                     }
                     break;
 
-                case "health", "hp","Hp","Health":
+                case "health", "hp", "Hp", "Health":
                     System.out.println("Currently you have " + adventure.getPlayer().getHealth() + " health");
                     break;
 
-                case "look","Look":
+                case "look", "Look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
                     System.out.println(adventure.getCurrentRoom().getRoomDescription());
                     if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()) {
@@ -77,11 +77,11 @@ public class UserInterface {
                     }
                     break;
 
-                case "help","Help","instruction", "instructions", "command", "commands":
+                case "help", "Help", "instruction", "instructions", "command", "commands":
                     showHelp();
                     break;
 
-                case "take","Take":
+                case "take", "Take":
                     Item itemTaken = adventure.playerTakeItem(userInput);
                     if (itemTaken == null) {
                         System.out.println("The item doesn't exist");
@@ -91,7 +91,7 @@ public class UserInterface {
                     break;
 
 
-                case "drop","Drop":
+                case "drop", "Drop":
                     Item itemDropped = adventure.playerDropItem(userInput);
                     if (itemDropped == null) {
                         System.out.println("The item doesn't exist");
@@ -112,7 +112,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "equip","Equip","eq","Eq":
+                case "equip", "Equip", "eq", "Eq":
                     result = adventure.playerEquip(userInput);
                     switch (result) {
                         case OK -> {
@@ -124,7 +124,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "unequip","Unequip","ueq":
+                case "unequip", "Unequip", "ueq":
                     result = adventure.playerUnEquip();
                     switch (result) {
                         case OK -> {
@@ -135,7 +135,7 @@ public class UserInterface {
                     }
                     break;
 
-                case "inventory", "inv","Inv","Inventory":
+                case "inventory", "inv", "Inv", "Inventory":
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
@@ -146,8 +146,8 @@ public class UserInterface {
                     }
                     break;
 
-                case "weapons","Weapons","ei":
-                    if (adventure.getPlayer().getEquippedWeapon()==null) {
+                case "weapons", "Weapons", "ei":
+                    if (adventure.getPlayer().getEquippedWeapon() == null) {
                         System.out.println("You haven't equipped anything :(");
                     } else {
                         System.out.println("Weapons you have equipped: ");
@@ -155,27 +155,27 @@ public class UserInterface {
                     }
                     break;
 
-                case "exit","Exit":
+                case "exit", "Exit":
                     System.out.println("Ending program...");
                     endProgram();
                     break;
-                case "die","Die":
+                case "die", "Die":
                     System.out.println("You commit Suicide...");
                     endProgram();
                     break;
-                case "hit","Hit":
+                case "hit", "Hit":
                     //TODO Minus 1 health
                     System.out.println("You hit yourself");
                     break;
-                case "punch","Punch":
+                case "punch", "Punch":
                     //TODO Minus 1 health
                     System.out.println("You punch yourself");
                     break;
-                case "fart","Fart":
+                case "fart", "Fart":
                     //TODO Make 10/100 chance of shart which results in death
                     System.out.println("You farted");
                     break;
-                case "spit","Spit":
+                case "spit", "Spit":
                     System.out.println("You spit on yourself");
                     break;
                 default:

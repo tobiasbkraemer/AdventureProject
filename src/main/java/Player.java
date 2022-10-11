@@ -9,14 +9,15 @@ public class Player {
     private final int maxHealth = 10;
 
     public Player(int health) {
-        this.health=health;
+        this.health = health;
     }
 
     public int getHealth() {
         return health;
     }
+
     public Player setHealth(int health) {
-        this.health = this.health+health;
+        this.health = this.health + health;
         return null;
     }
 
@@ -30,8 +31,8 @@ public class Player {
     }
 
     public Item takeItem(String itemName) {
-        for(Item item : currentRoom.getRoomItems()) {
-            if(item.getItemName().equalsIgnoreCase(itemName)) {
+        for (Item item : currentRoom.getRoomItems()) {
+            if (item.getItemName().equalsIgnoreCase(itemName)) {
                 inventory.add(item);
                 currentRoom.removeItem(itemName);
                 return item;
@@ -40,9 +41,9 @@ public class Player {
         return null;
     }
 
-    public Item dropItem (String itemName) {
+    public Item dropItem(String itemName) {
         for (Item item : inventory) {
-            if(item.getItemName().equalsIgnoreCase(itemName)) {
+            if (item.getItemName().equalsIgnoreCase(itemName)) {
                 currentRoom.addItem(item);
                 inventory.remove(item);
                 return item;
@@ -82,6 +83,7 @@ public class Player {
     public void removeItem(Item item) {
         inventory.remove(item);
     }
+
     public Item getItem(String name) {
         for (Item item : inventory) {
             if (item.getItemName().equalsIgnoreCase(name)) {
@@ -96,38 +98,38 @@ public class Player {
         return equippedWeapon;
     }
 
-    public ReturnMessage eatFood (String itemName) {
+    public ReturnMessage eatFood(String itemName) {
         Item item = getItem(itemName);
-        if ( item instanceof Food) {
+        if (item instanceof Food) {
             health += ((Food) item).getHealthPoints();
             removeItem(item);
             return ReturnMessage.OK;
         } else {
-            if (item!=null){
+            if (item != null) {
                 return ReturnMessage.CANT;
             }
             return ReturnMessage.NOT_FOUND;
         }
     }
 
-    public ReturnMessage equipWeapon (String itemName) {
+    public ReturnMessage equipWeapon(String itemName) {
         Item item = getItem(itemName);
-        if ( item instanceof Weapon) {
-            equippedWeapon=(Weapon) item;
+        if (item instanceof Weapon) {
+            equippedWeapon = (Weapon) item;
             removeItem(item);
             return ReturnMessage.OK;
         } else {
-            if (item!=null){
+            if (item != null) {
                 return ReturnMessage.CANT;
             }
             return ReturnMessage.NOT_FOUND;
         }
     }
 
-    public ReturnMessage unEquipWeapon () {
+    public ReturnMessage unEquipWeapon() {
         if (equippedWeapon != null) {
             inventory.add(equippedWeapon);
-            equippedWeapon=null;
+            equippedWeapon = null;
             return ReturnMessage.OK;
         } else {
             return ReturnMessage.CANT;

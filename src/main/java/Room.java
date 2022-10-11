@@ -8,7 +8,7 @@ public class Room {
     private String name;
     private String description;
 
-    private ArrayList <Item> items = new ArrayList<>();
+    private ArrayList<Item> items = new ArrayList<>();
 
 
     public Room(String name, String description) {
@@ -58,24 +58,25 @@ public class Room {
     }
 
 
-    public void createItem (String name, String description){
-        Item item = new Item (name, description);
+    public void createItem(String name, String description) {
+        Item item = new Item(name, description);
         addItem(item);
     }
 
-    public void createFood (String name, String description, int healthPoints) {
-        Food food = new Food(name, description,healthPoints);
+    public void createFood(String name, String description, int healthPoints) {
+        Food food = new Food(name, description, healthPoints);
         addItem(food);
     }
 
-    public void createWeapon (String name, String description, int healthPoints) {
-        Weapon weapon = new Weapon(name, description,healthPoints);
+    public void createWeapon(String name, String description, int healthPoints) {
+        Weapon weapon = new Weapon(name, description, healthPoints);
         addItem(weapon);
     }
 
     public void addItem(Item item) {
         items.add(item);
     }
+
     public Item getItem(String name) {
         for (Item item : items) {
             if (item.getItemName().equals(name)) {
@@ -88,11 +89,11 @@ public class Room {
     public ArrayList<Item> getRoomItems() {
         return items;
     }
-    
 
-    public Item removeItem(String name){
-        for (Item item : items){
-            if (item.getItemName().equalsIgnoreCase(name)){
+
+    public Item removeItem(String name) {
+        for (Item item : items) {
+            if (item.getItemName().equalsIgnoreCase(name)) {
                 items.remove(item);
                 return item;
             }

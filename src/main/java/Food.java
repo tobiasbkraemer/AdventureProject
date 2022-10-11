@@ -5,10 +5,10 @@ public class Food extends Item {
 
     public Food(String name, String description, int healthPoints) {
         super(name, description);
-        this.healthPoints=healthPoints;
+        this.healthPoints = healthPoints;
     }
 
-    public int getHealthPoints () {
+    public int getHealthPoints() {
         return healthPoints;
     }
 }

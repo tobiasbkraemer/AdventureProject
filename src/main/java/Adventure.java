@@ -41,11 +41,11 @@ public class Adventure {
         return player.unEquipWeapon();
     }
 
-    public Item playerTakeItem (String itemName) {
+    public Item playerTakeItem(String itemName) {
         return player.takeItem(itemName);
     }
 
-    public Item playerDropItem (String itemName) {
+    public Item playerDropItem(String itemName) {
         return player.dropItem(itemName);
     }
 
