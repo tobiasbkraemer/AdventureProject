@@ -139,7 +139,7 @@ public class UserInterface {
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
-                        System.out.println("\"Items in your inventory: " + "\n");
+                        System.out.println("\"Weapon Equipped: " + "\n");
                         for (Item item : adventure.getPlayer().getInventory()) {
                             System.out.println(item.getItemName());
                         }
