@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="ignorelowercase på take og drop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Formatteret linjer" />
     <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665409700515</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Formatteret linjer">
+      <created>1665471963132</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665471963132</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,14 +272,15 @@
     <MESSAGE value="Changes by kjartanleander" />
     <MESSAGE value="ændret i ei" />
     <MESSAGE value="ignorelowercase på take og drop" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignorelowercase på take og drop" />
+    <MESSAGE value="Formatteret linjer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatteret linjer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Player.java</url>
-          <line>127</line>
+          <line>129</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

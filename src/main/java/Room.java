@@ -79,7 +79,7 @@ public class Room {
 
     public Item getItem(String name) {
         for (Item item : items) {
-            if (item.getItemName().equals(name)) {
+            if (item.getItemName().equalsIgnoreCase(name)) {
                 return item;
             }
         }
