@@ -9,7 +9,7 @@ public class Map {
         Room room2 = new Room("Cafeteria", "This is the Cafeteria. It's surprisingly clean in here, but there is a weird smell. It looks like old food on the table in front of you");
         Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a rifle hanging on the wall, next to a big axe.");
         Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. the label is teared off, cant read the effects, but they could be useful.");
-        Room room5 = new Room("Engine", "\"ARAARARGH!!!\" In the center of the engine room stands a huge space monster guarding the crewmates and the engines. Equip a weapon and defeat the space monster! "+"\n"+"But be careful, because it looks like the space monster might fight back.");
+        Room room5 = new Room("Engine", "\"ARAARARGH!!!\" In the center of the engine room stands a alien guarding the crewmates and the engines. Equip a weapon and defeat the alien! "+"\n"+"But be careful, because it looks like the alien might fight back.");
         Room room6 = new Room("Electrical", "This is electrical. It looks like the powersource to the spaceship.");
         Room room7 = new Room("Dormitory","This is the dormitory. The room is full of beds. It's quiet in here, but that's rarely a good sign.");
         Room room8 = new Room("Storage", "Even though it is completely dark in Storage, you can almost feel the spiderwebs hanging from the ceiling and dust covering every surface. There may be some useful things in here, but it's too dark to see.");
@@ -49,7 +49,7 @@ public class Map {
         room5.setWest(null);
         room5.setNorth(null);
         room5.setSouth(room8);
-        room5.createEnemy("space monster","huge and frightening",14, new MeleeWeapon("has large claws","deadly",3),room5);
+        room5.createEnemy("alien","huge and frightening",14, new MeleeWeapon("has large claws","deadly",3),room5);
 
         // Electrical
         room6.setNorth(room3);

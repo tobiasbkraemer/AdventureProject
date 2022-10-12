@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Rettet på ammo update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Story update 1.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +69,7 @@
       <workItem from="1664194967183" duration="4714000" />
       <workItem from="1665470506986" duration="838000" />
       <workItem from="1665558546070" duration="8462000" />
-      <workItem from="1665586407955" duration="5815000" />
+      <workItem from="1665586407955" duration="9642000" />
     </task>
     <task id="LOCAL-00001" summary="Tilføjet item class og flyttet rundt samt tilføjet flere commands.">
       <created>1664443932166</created>
@@ -278,7 +274,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665594267624</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Story update">
+      <created>1665598852735</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1665598852735</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Story update 1.0">
+      <created>1665599019983</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1665599019983</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Story update 1.0">
+      <created>1665599653281</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1665599653281</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +335,8 @@
     <MESSAGE value="Lavet attack tingeling" />
     <MESSAGE value="Rettet på attack" />
     <MESSAGE value="Rettet på ammo update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rettet på ammo update" />
+    <MESSAGE value="Story update" />
+    <MESSAGE value="Story update 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Story update 1.0" />
   </component>
 </project>
