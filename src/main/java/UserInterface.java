@@ -148,7 +148,7 @@ public class UserInterface {
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
-                        System.out.println("\"Inventory: " + "\n");
+                        System.out.println("Inventory: " + "\n");
                         for (Item item : adventure.getPlayer().getInventory()) {
                             System.out.println(item.getItemName());
                             System.out.println(item.getItemDescription());
@@ -160,7 +160,7 @@ public class UserInterface {
                     if (adventure.getPlayer().getEquippedWeapon() == null) {
                         System.out.println("You haven't equipped anything :(");
                     } else {
-                        System.out.println("Weapons you have equipped: ");
+                        System.out.println("Weapons equipped: ");
                         System.out.println(adventure.getPlayer().getEquippedWeapon().getItemName());
                     }
                     break;
@@ -186,7 +186,7 @@ public class UserInterface {
                         System.out.println("Ouch! The enemy struck back.");
                         System.out.println("Your current health: "+adventure.getPlayer().getHealth()+" HP");
                         for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
-                            System.out.println(enemy.getName() + " current health: " + enemy.getHealthPoints());
+                            System.out.println("Alien current health: " + enemy.getHealthPoints());
                         }
                         if (((Weapon) searchEquippedWeapon).getRemainingAmmo()!=0)
                         System.out.println(((Weapon) searchEquippedWeapon).getRemainingAmmo() + " shots left");
