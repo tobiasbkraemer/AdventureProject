@@ -17,7 +17,7 @@ public class UserInterface {
 
     public void welcome() {
         System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"
-                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help.");
+                + "-".repeat(30) + "\nYou are a person on an uninhabited planet, the search for food, shelter and a getaway has been long. You stumble upon a crashed spaceship. You choose to search it, for the possibility of a better life. when you enter the crashed spaceship, theres a message playing from the overhead radio: Hello captain! Welcome back on board, today's date is 12th of december, year 3005... the spaceship seems to be lacking power and theres no sign of life... just yet. overhead prompter goes of again: Feel free to look around. Let me know if you need any help.");
         String input = "";
         handleInput(input);
     }
@@ -179,10 +179,6 @@ public class UserInterface {
                 case "Shoot", "shoot":
                     //TODO Minus 1 health
                     System.out.println("You punch yourself");
-                    break;
-                case "fart", "Fart":
-                    //TODO Make 10/100 chance of shart which results in death
-                    System.out.println("You farted");
                     break;
                 case "spit", "Spit":
                     System.out.println("You spit on yourself");
