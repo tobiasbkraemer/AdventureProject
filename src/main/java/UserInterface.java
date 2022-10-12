@@ -182,13 +182,22 @@ public class UserInterface {
                     Item equippedWeapon = adventure.getItem(userInput);
 
                     if (attack == AttackCommands.Attack_Enemy) {
-                        System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedWeapon).getDamage() + " damage dealt");
-                        System.out.println("Ouch! The enemy struck back. Current health: "+adventure.getPlayer().getHealth()+" HP");
+                        System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedWeapon).getDamage() + " damage dealt.");
+                        System.out.println("Ouch! The enemy struck back.");
+                        System.out.println("Your current health: "+adventure.getPlayer().getHealth()+" HP");
+                        for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
+                            System.out.println(enemy.getName() + " current health: " + enemy.getHealthPoints());
+                        }
                         if (((Weapon) searchEquippedWeapon).getRemainingAmmo()!=0)
                         System.out.println(((Weapon) searchEquippedWeapon).getRemainingAmmo() + " shots left");
+                        if (adventure.getPlayer().getHealth()<=0) {
+                            System.out.println("Game over - You died");
+                            endProgram();
+                        }
+
 
                     } else if (attack == AttackCommands.Enemy_Dead) {
-                        System.out.println("Congrats! "+userInput + " has been slayed. Our crewmates are free and we can finally restart the spaceship's and get off this terrifying planet!");
+                        System.out.println("Congrats! "+userInput + " has been slayed. Our crewmates are free and we can finally restart the spaceship's engines and get off this terrifying planet!");
 
                     } else if (attack == AttackCommands.No_Enemy) {
                         System.out.println("There is no threats in here");

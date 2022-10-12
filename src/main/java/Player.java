@@ -78,10 +78,6 @@ public class Player {
         return inventory;
     }
 
-    public void addItem(Item item) {
-        inventory.add(item);
-    }
-
     public void removeItem(Item item) {
         inventory.remove(item);
     }
