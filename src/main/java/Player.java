@@ -19,6 +19,10 @@ public class Player {
         return null;
     }
 
+    public void currentHealth(int damage) {
+        health -= damage;
+    }
+
     public Room getCurrentRoom() {
         return currentRoom;
     }
@@ -135,57 +139,26 @@ public class Player {
     }
 
     public AttackCommands attackCommand(String enemyName) {
-        Enemy selectedEnemy = null;
-        Enemy enemyNearby = currentRoom.getEnemies().get(0);
+
         Weapon weapon = equippedWeapon;
+        Enemy enemy = currentRoom.searchEnemy(enemyName);
         if (weapon == null) {
             return AttackCommands.No_Weapon_Equipped;
-        } else {
-            if (getEquippedWeapon().canUse()) {
-                if (!currentRoom.getEnemies().isEmpty()) {
-                    for (Enemy enemy : currentRoom.getEnemies()) {
-                        if (enemyName.equals(enemy.getName())) {
-                            selectedEnemy = enemy;
-                            attack(selectedEnemy);
-                            return AttackCommands.Attack_Enemy;
-                        }
-                    }
-                    if (selectedEnemy == null) {
-                        attack(enemyNearby);
-                        return AttackCommands.No_Such_Enemy;
-                    }
-                } else {
-                    return AttackCommands.No_Enemy;
-                }
+
+        } else if (enemy == null) {
+            return AttackCommands.No_Enemy;
+
+        } else if (weapon.canUse()) {
+            weapon.useAmmo();
+            enemy.currentHealth(weapon.getDamage());
+            if (!enemy.isDead()) {
+                currentHealth(enemy.getWeapon().getDamage());
             } else {
-                return AttackCommands.No_Ammo;
+                return AttackCommands.Enemy_Dead;
             }
-        }
-
-        return null;
-    }
-
-    public void attack(Enemy enemy) {
-        dealDamage(enemy);
-        getHit(enemy);
-        enemy.isDead(enemy);
-    }
-
-    private void getHit(Enemy enemy) {
-        health -= enemy.getWeapon().getDamage();
-    }
-
-    private void dealDamage(Enemy enemy) {
-        int damageDealt = enemy.getHealthPoints() - equippedWeapon.getDamage();
-        enemy.hit(damageDealt);
-        equippedWeapon.setAmmo(equippedWeapon.getRemainingAmmo() - 1);
-    }
-
-    public boolean isDead() {
-        if (health <= 0) {
-            return true;
+            return AttackCommands.Attack_Enemy;
         } else {
-            return false;
+            return AttackCommands.No_Ammo;
         }
     }
 

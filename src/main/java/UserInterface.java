@@ -17,7 +17,7 @@ public class UserInterface {
 
     public void welcome() {
         System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"
-                + "-".repeat(30) + "\nYou are a person on an uninhabited planet, the search for food, shelter and a getaway has been long. You stumble upon a crashed spaceship. You choose to search it, for the possibility of a better life. when you enter the crashed spaceship, theres a message playing from the overhead radio: Hello captain! Welcome back on board, today's date is 12th of december, year 3005... the spaceship seems to be lacking power and theres no sign of life... just yet. overhead prompter goes of again: Feel free to look around. Let me know if you need any help.");
+                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help." +adventure.getCurrentRoom().getRoomDescription());
         String input = "";
         handleInput(input);
     }
@@ -69,8 +69,6 @@ public class UserInterface {
 
                 case "look", "Look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
-                    System.out.println(adventure.getCurrentRoom().getEnemies());
-                    //System.out.println(adventure.getCurrentRoom().getRoomDescription());
                     if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()) {
                         for (Item item : adventure.getPlayer().getCurrentRoom().getRoomItems()) {
                             System.out.println(item.getItemName() + ", " + item.getItemDescription());
@@ -166,43 +164,38 @@ public class UserInterface {
                     System.out.println("Ending program...");
                     endProgram();
                     break;
+
                 case "die", "Die":
                     System.out.println("You commit Suicide...");
                     endProgram();
                     break;
-                case "attack", "Attack":
-                    AttackCommands attackResult;
-                    attackResult = adventure.playerAttack(userInput);
-                    switch (attackResult) {
-                        case No_Enemy -> System.out.println("No threats in here");
-                        case No_Such_Enemy -> {
-                            System.out.println("Enemy doesn't exist");
-                        }
 
-                        case No_Ammo -> System.out.println("That's not a weapon");
-                        case No_Weapon_Equipped -> System.out.println("You have no weapons equipped");
-                        case Attack_Enemy -> {
+                case "attack", "Attack","Shoot","shoot":
 
-                            Enemy enemy1 = adventure.getCurrentRoom().getEnemies().get(0);
-                            if (!adventure.getPlayer().isDead()) {
-                                System.out.println("you attacked " + enemy1.getName() + " with " + adventure.getPlayer().getEquippedWeapon().getItemName());
+                    AttackCommands attack = adventure.playerAttack(userInput);
+                    Item searchEquippedItem = adventure.getEquippedWeapon();
+                    Item itemInPlayer = adventure.getItem(userInput);
 
-                                if (userInput.toLowerCase().equals(adventure.getCurrentRoom().getEnemies().get(0).getName())) {
-                                    System.out.println(enemy1.getName() + "HP: " + enemy1.getHealthPoints());
-                                }
+                    if (attack == AttackCommands.Attack_Enemy) {
+                        System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedItem).getDamage() + " damage dealt");
+                        System.out.println(((Weapon) searchEquippedItem).getRemainingAmmo() + " shots left");
 
-                                for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
-                                    System.out.println(enemy.getName() + " HP: " + (enemy.getHealthPoints() - adventure.getPlayer().getEquippedWeapon().getDamage()));
-                                }
-                                System.out.println("you got hit by " + userInput + "!");
-                                System.out.println("your health is now " + adventure.getPlayer().getHealth() + " HP");
-                            } else {
-                                System.out.println("you are dead, goodbye!!!");
-                                System.exit(1);
-                            }
-                        }
+                    } else if (attack == AttackCommands.Enemy_Dead) {
+                        System.out.println(userInput + " is dead");
 
+                    } else if (attack == AttackCommands.No_Enemy) {
+                        System.out.println("No enemies nearby");
+
+                    }else if (attack == AttackCommands.No_Ammo) {
+                        System.out.println("No ammunition left");
+
+                    } else if (attack == AttackCommands.No_Weapon_Equipped) {
+                        System.out.println("You dont have " + itemInPlayer + " equipped");
+
+                    } else {
+                        System.out.println("Invalid input (nothing matched your search)");
                     }
+
                     break;
 
 

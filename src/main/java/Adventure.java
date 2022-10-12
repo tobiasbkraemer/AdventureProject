@@ -19,6 +19,10 @@ public class Adventure {
         return player.getCurrentRoom();
     }
 
+    public Weapon getEquippedWeapon() {
+        return player.getEquippedWeapon();
+    }
+
     public Player setHealth(int health) {
         return player.setHealth(health);
     }
@@ -54,6 +58,8 @@ public class Adventure {
     public Item playerDropItem(String itemName) {
         return player.dropItem(itemName);
     }
+
+
 
 }
 
