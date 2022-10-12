@@ -137,7 +137,8 @@ public class Player {
     public AttackCommands attackCommand(String enemyName) {
         Enemy selectedEnemy = null;
         Enemy enemyNearby = currentRoom.getEnemies().get(0);
-        if (getEquippedWeapon() == null) {
+        Weapon weapon = equippedWeapon;
+        if (weapon == null) {
             return AttackCommands.No_Weapon_Equipped;
         } else {
             if (getEquippedWeapon().canUse()) {
@@ -157,7 +158,7 @@ public class Player {
                     return AttackCommands.No_Enemy;
                 }
             } else {
-                return AttackCommands.No_Usable_Weapon;
+                return AttackCommands.No_Ammo;
             }
         }
 
@@ -167,7 +168,7 @@ public class Player {
     public void attack(Enemy enemy) {
         dealDamage(enemy);
         getHit(enemy);
-        enemy.isDead();
+        enemy.isDead(enemy);
     }
 
     private void getHit(Enemy enemy) {

@@ -5,6 +5,17 @@ public class Enemy {
     private Weapon weapon;
     private Room room;
 
+    @Override
+    public String toString() {
+        return "Enemy{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", healthPoints=" + healthPoints +
+                ", weapon=" + weapon +
+                ", room=" + room +
+                '}';
+    }
+
     public Enemy(String name, String description, int healthPoints, Weapon weapon, Room room) {
         this.name = name;
         this.description = description;
@@ -34,13 +45,15 @@ public class Enemy {
         this.healthPoints = newHealth;
     }
 
-    public boolean isDead(){
+    public boolean isDead(Enemy enemy){
         if (healthPoints<=0){
             room.addItem(weapon);
-            room.removeEnemy(this);
+            room.removeEnemy(enemy);
             return true;
         }else{
             return false;
         }
     }
+
+
 }
