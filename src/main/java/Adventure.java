@@ -1,3 +1,5 @@
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public class Adventure {
     private Player player;
     private Map map = new Map();
@@ -39,6 +41,10 @@ public class Adventure {
 
     public ReturnMessage playerUnEquip() {
         return player.unEquipWeapon();
+    }
+
+    public AttackCommands playerAttack(String userInput) {
+        return player.attackCommand(userInput);
     }
 
     public Item playerTakeItem(String itemName) {

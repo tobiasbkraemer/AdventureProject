@@ -1,15 +1,16 @@
 public class MeleeWeapon extends Weapon{
 
-    private int healthPoints;
-
-
-    public MeleeWeapon
-            (String name, String description, int healthPoints) {
-        super(name, description, healthPoints);
-        this.healthPoints = healthPoints;
+    public MeleeWeapon (String name, String description, int damage) {
+        super(name, description, damage);
     }
 
-    public int getHealthPoints() {
-        return healthPoints;
+    @Override
+    public int getRemainingAmmo() {
+        return 0;
+    }
+
+    @Override
+    public void setAmmo(int ammo) {
+        ammo = 0;
     }
 }

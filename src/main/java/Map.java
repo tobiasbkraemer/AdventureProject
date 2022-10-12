@@ -54,6 +54,7 @@ public class Map {
         room7.setEast(room8);
         room7.setWest(null);
         room7.setSouth(null);
+        room7.createItem("key","for opening locked doors");
 
         room8.setEast(room9);
         room8.setWest(room7);

@@ -139,7 +139,7 @@ public class UserInterface {
                     if (adventure.getPlayer().getInventory().isEmpty()) {
                         System.out.println("There is nothing in your inventory :(");
                     } else {
-                        System.out.println("\"Weapon Equipped: " + "\n");
+                        System.out.println("\"Inventory: " + "\n");
                         for (Item item : adventure.getPlayer().getInventory()) {
                             System.out.println(item.getItemName());
                         }
@@ -163,11 +163,20 @@ public class UserInterface {
                     System.out.println("You commit Suicide...");
                     endProgram();
                     break;
-                case "hit", "Hit":
-                    //TODO Minus 1 health
-                    System.out.println("You hit yourself");
+                case "attack", "Attack":
+                    AttackCommands attackResult;
+                    attackResult = adventure.playerAttack(userInput);
+                    switch (attackResult) {
+                        case No_Enemy -> System.out.println("No threats in here");
+                        case No_Such_Enemy -> System.out.println("Enemy doesn't exist");
+                        case No_Usable_Weapon -> System.out.println("That's not a weapon");
+                        case No_Weapon_Equipped -> System.out.println("You have no weapons equipped");
+                        case Attack_Enemy -> System.out.println("Attaaaaack!");
+
+                    }
+
                     break;
-                case "punch", "Punch":
+                case "Shoot", "shoot":
                     //TODO Minus 1 health
                     System.out.println("You punch yourself");
                     break;

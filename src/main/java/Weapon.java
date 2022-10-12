@@ -1,16 +1,29 @@
-public class Weapon extends Item {
+public abstract class Weapon extends Item {
 
-    private int healthPoints;
+    private int damage;
 
 
-    public Weapon
-            (String name, String description, int healthPoints) {
+    public Weapon (String name, String description, int damage) {
         super(name, description);
-        this.healthPoints = healthPoints;
+        this.damage = damage;
     }
 
-    public int getHealthPoints() {
-        return healthPoints;
+    public int getDamage() {
+        return damage;
+    }
+
+    public boolean canUse(){
+        return true;
+    }
+
+    public abstract int getRemainingAmmo();
+
+
+    public abstract void setAmmo(int ammo);
+
+    @Override
+    public String getItemName() {
+        return super.getItemName();
     }
 
 

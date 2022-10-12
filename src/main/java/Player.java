@@ -135,6 +135,64 @@ public class Player {
             return ReturnMessage.CANT;
         }
     }
+
+    public AttackCommands attackCommand(String enemyName) {
+
+        Enemy selectedEnemy = null;
+        Enemy nearestEnemy = currentRoom.getEnemies().get(0);
+
+        if (getEquippedWeapon() == null) {
+            return AttackCommands.No_Weapon_Equipped;
+        } else {
+            if (getEquippedWeapon().canUse()) {
+                if (!currentRoom.getEnemies().isEmpty()) {
+                    for (Enemy enemy : currentRoom.getEnemies()) {
+                        if (enemyName.equals(enemy.getName())) {
+                            selectedEnemy = enemy;
+                            attack(selectedEnemy);
+                            return AttackCommands.Attack_Enemy;
+                        }
+                    }
+                    if (selectedEnemy == null) {
+                        attack(nearestEnemy);
+                        return AttackCommands.No_Such_Enemy;
+                    }
+                } else {
+                    return AttackCommands.No_Enemy;
+                }
+            } else {
+                return AttackCommands.No_Usable_Weapon;
+            }
+        }
+
+        return null;
+    }
+
+    public void attack(Enemy enemy) {
+        dealDamage(enemy);
+        getHit(enemy);
+        enemy.isDead();
+    }
+
+    private void getHit(Enemy enemy) {
+        health -= enemy.getWeapon().getDamage();
+    }
+
+    private void dealDamage(Enemy enemy) {
+        int damageDealt = enemy.getHealthPoints() - equippedWeapon.getDamage();
+        enemy.hit(damageDealt);
+        equippedWeapon.setAmmo(equippedWeapon.getRemainingAmmo() - 1);
+    }
+
+    public boolean isDead() {
+        if (health <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
+
 
 

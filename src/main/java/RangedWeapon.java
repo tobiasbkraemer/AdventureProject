@@ -1,16 +1,30 @@
 public class RangedWeapon extends Weapon{
 
-    private int healthPoints;
+    private int ammo;
 
 
-    public RangedWeapon
-            (String name, String description, int healthPoints) {
-        super(name, description, healthPoints);
-        this.healthPoints = healthPoints;
+    public RangedWeapon (String name, String description, int damage, int ammo) {
+        super(name, description, damage);
+        this.ammo = ammo;
     }
 
-    public int getHealthPoints() {
-        return healthPoints;
+    @Override
+    public int getRemainingAmmo() {
+        return ammo;
+    }
+
+    @Override
+    public void setAmmo(int ammo) {
+        this.ammo = ammo;
+    }
+
+    @Override
+    public boolean canUse() {
+        if (ammo <= 0){
+            return false;
+        }else{
+            return true;
+        }
     }
 
 }

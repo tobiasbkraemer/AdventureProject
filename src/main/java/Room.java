@@ -9,6 +9,7 @@ public class Room {
     private String description;
 
     private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Enemy> enemies = new ArrayList<>();
 
 
     public Room(String name, String description) {
@@ -68,14 +69,23 @@ public class Room {
         addItem(food);
     }
 
-    public void createMeleeWeapon(String name, String description, int healthPoints) {
-        MeleeWeapon meleeWeapon = new MeleeWeapon(name, description, healthPoints);
+    public void createMeleeWeapon(String name, String description, int damage) {
+        MeleeWeapon meleeWeapon = new MeleeWeapon(name, description, damage);
         addItem(meleeWeapon);
     }
 
-    public void createRangedWeapon(String name, String description, int healthPoints) {
-        RangedWeapon rangedWeapon = new RangedWeapon(name, description, healthPoints);
+    public void createRangedWeapon(String name, String description, int damage, int ammo) {
+        RangedWeapon rangedWeapon = new RangedWeapon(name, description, damage, ammo);
         addItem(rangedWeapon);
+    }
+
+    public void createEnemy(String name, String description, int healthPoints, Weapon weapon, Room room){
+        Enemy enemy = new Enemy(name, description, healthPoints, weapon, room);
+        addEnemy(enemy);
+    }
+
+    private void addEnemy(Enemy enemy) {
+        enemies.add(enemy);
     }
 
     public void addItem(Item item) {
@@ -95,6 +105,10 @@ public class Room {
         return items;
     }
 
+    public ArrayList<Enemy> getEnemies () {
+        return enemies;
+    }
+
 
     public Item removeItem(String name) {
         for (Item item : items) {
@@ -106,13 +120,7 @@ public class Room {
         return null;
     }
 
-    /*public Weapon removeWeapon(String name){
-        for (Weapon weapon : weapons){
-            if (weapon.getItemName().equalsIgnoreCase(name)){
-                weapons.remove(weapon);
-                return weapon;
-            }
-        }
-        return null;
-    }*/
+    public void removeEnemy(Enemy enemy) {
+        enemies.remove(enemy);
+    }
 }
