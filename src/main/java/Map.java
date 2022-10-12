@@ -35,21 +35,21 @@ public class Map {
         room3.setNorth(null);
         room3.setEast(null);
         room3.createRangedWeapon("rifle", "deals 2 damage per shot", 2,5);
-        room3.createMeleeWeapon("axe", "deals 4 damage per swing", 2);
+        room3.createMeleeWeapon("axe", "deals 4 damage per swing", 4);
 
         // Medical
         room4.setNorth(room1);
         room4.setSouth(room7);
         room4.setWest(null);
         room4.setEast(null);
-        room4.createFood("pills", "effect unknown", +5);
+        room4.createFood("pills", "effect unknown", +10);
 
         // Last room - Engine
         room5.setEast(null);
         room5.setWest(null);
         room5.setNorth(null);
         room5.setSouth(room8);
-        room5.createEnemy("space monster","huge and frightening",14, new MeleeWeapon("has large claws","annoying",1),room5);
+        room5.createEnemy("space monster","huge and frightening",14, new MeleeWeapon("has large claws","deadly",3),room5);
 
         // Electrical
         room6.setNorth(room3);
