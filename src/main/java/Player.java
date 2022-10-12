@@ -4,9 +4,7 @@ public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
     private Weapon equippedWeapon;
-    private int currentHealth;
     private int health;
-    private final int maxHealth = 10;
 
     public Player(int health) {
         this.health = health;
@@ -137,10 +135,8 @@ public class Player {
     }
 
     public AttackCommands attackCommand(String enemyName) {
-
         Enemy selectedEnemy = null;
-        Enemy nearestEnemy = currentRoom.getEnemies().get(0);
-
+        Enemy enemyNearby = currentRoom.getEnemies().get(0);
         if (getEquippedWeapon() == null) {
             return AttackCommands.No_Weapon_Equipped;
         } else {
@@ -154,7 +150,7 @@ public class Player {
                         }
                     }
                     if (selectedEnemy == null) {
-                        attack(nearestEnemy);
+                        attack(enemyNearby);
                         return AttackCommands.No_Such_Enemy;
                     }
                 } else {
