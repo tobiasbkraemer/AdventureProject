@@ -19,12 +19,7 @@ public abstract class Weapon extends Item {
     public abstract int getRemainingAmmo();
 
 
-    public abstract void setAmmo(int ammo);
-
-    @Override
-    public String getItemName() {
-        return super.getItemName();
-    }
+    public abstract void useAmmo();
 
 
 }

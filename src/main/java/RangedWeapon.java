@@ -14,8 +14,8 @@ public class RangedWeapon extends Weapon{
     }
 
     @Override
-    public void setAmmo(int ammo) {
-        this.ammo = ammo;
+    public void useAmmo() {
+        ammo--;
     }
 
     @Override

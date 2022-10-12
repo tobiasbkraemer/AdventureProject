@@ -37,6 +37,10 @@ public class Enemy {
         return healthPoints;
     }
 
+    public void currentHealth(int damage) {
+        healthPoints -= damage;
+    }
+
     public Weapon getWeapon() {
         return weapon;
     }
@@ -45,10 +49,10 @@ public class Enemy {
         this.healthPoints = newHealth;
     }
 
-    public boolean isDead(Enemy enemy){
+    public boolean isDead(){
         if (healthPoints<=0){
             room.addItem(weapon);
-            room.removeEnemy(enemy);
+            room.removeEnemy(name);
             return true;
         }else{
             return false;

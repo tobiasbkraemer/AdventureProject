@@ -10,7 +10,10 @@ public class MeleeWeapon extends Weapon{
     }
 
     @Override
-    public void setAmmo(int ammo) {
-        ammo = 0;
+    public void useAmmo() {
+    }
+
+    public boolean canUse() {
+        return true;
     }
 }

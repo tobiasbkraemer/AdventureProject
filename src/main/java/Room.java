@@ -128,7 +128,22 @@ public class Room {
         return null;
     }
 
-    public void removeEnemy(Enemy enemy) {
-        enemies.remove(enemy);
+    public Enemy removeEnemy(String name) {
+        for (Enemy enemy : enemies) {
+            if (enemy.getName().equals(name)) {
+                enemies.remove(enemy);
+                return enemy;
+            }
+        }
+        return null;
+    }
+
+    public Enemy searchEnemy(String searchEnemy) {
+        for (Enemy enemy : enemies) {
+            if (enemy.getName().equals(searchEnemy)) {
+                return enemy;
+            }
+        }
+        return null;
     }
 }
