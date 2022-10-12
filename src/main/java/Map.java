@@ -27,7 +27,7 @@ public class Map {
         room2.setEast(room3);
         room2.setNorth(null);
         room2.setSouth(null);
-        room2.createFood("old food", "may be poisonous or healthy", -1);
+        room2.createFood("food", "old, may be poisonous or healthy", -1);
 
         // Weapon arsenal
         room3.setWest(room2);
@@ -78,11 +78,6 @@ public class Map {
 
         starterRoom = room1;
 
-    }
-
-
-    public ArrayList<Item> getItems() {
-        return items;
     }
 
     public Room getStarterRoom() {

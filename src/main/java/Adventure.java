@@ -23,10 +23,6 @@ public class Adventure {
         return player.getEquippedWeapon();
     }
 
-    public Player setHealth(int health) {
-        return player.setHealth(health);
-    }
-
     public Item getItem(String itemName) {
         return player.getItem(itemName);
     }
