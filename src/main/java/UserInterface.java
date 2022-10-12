@@ -16,8 +16,8 @@ public class UserInterface {
     }
 
     public void welcome() {
-        System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"
-                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help." +adventure.getCurrentRoom().getRoomDescription());
+        System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"+ adventure.getCurrentRoom().getRoomDescription()
+                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help.");
         String input = "";
         handleInput(input);
     }
@@ -178,6 +178,7 @@ public class UserInterface {
 
                     if (attack == AttackCommands.Attack_Enemy) {
                         System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedItem).getDamage() + " damage dealt");
+                        if (((Weapon) searchEquippedItem).getRemainingAmmo()!=0)
                         System.out.println(((Weapon) searchEquippedItem).getRemainingAmmo() + " shots left");
 
                     } else if (attack == AttackCommands.Enemy_Dead) {
