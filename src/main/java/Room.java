@@ -68,9 +68,14 @@ public class Room {
         addItem(food);
     }
 
-    public void createWeapon(String name, String description, int healthPoints) {
-        Weapon weapon = new Weapon(name, description, healthPoints);
-        addItem(weapon);
+    public void createMeleeWeapon(String name, String description, int healthPoints) {
+        MeleeWeapon meleeWeapon = new MeleeWeapon(name, description, healthPoints);
+        addItem(meleeWeapon);
+    }
+
+    public void createRangedWeapon(String name, String description, int healthPoints) {
+        RangedWeapon rangedWeapon = new RangedWeapon(name, description, healthPoints);
+        addItem(rangedWeapon);
     }
 
     public void addItem(Item item) {
