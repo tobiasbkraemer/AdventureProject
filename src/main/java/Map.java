@@ -31,7 +31,10 @@ public class Map {
         room3.setSouth(room6);
         room3.setNorth(null);
         room3.setEast(null);
-        room3.createMeleeWeapon("axe", "causes 3 damage", -3);
+        room3.createRangedWeapon("rifle", "causes 2 damage", 2,5);
+        room3.createMeleeWeapon("axe", "causes 3 damage", 3);
+        room3.createEnemy("brian","big hairy fella", 2, new MeleeWeapon("his voice","annoying",1),room3);
+        room3.createEnemy("allan","small ugly fella", 2, new MeleeWeapon("his size","also annoying",1),room3);
 
         room4.setNorth(room1);
         room4.setSouth(room7);
