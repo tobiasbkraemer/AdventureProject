@@ -17,7 +17,7 @@ public class UserInterface {
 
     public void welcome() {
         System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"+ adventure.getCurrentRoom().getRoomDescription()
-                + "-".repeat(30) + "\nFeel free to look around. Let me know if you need any help.");
+                 +"\nFeel free to look around. Let me know if you need any help."+"\n"+ "-".repeat(30));
         String input = "";
         handleInput(input);
     }
@@ -121,7 +121,7 @@ public class UserInterface {
                     result = adventure.playerEquip(userInput);
                     switch (result) {
                         case OK -> {
-                            System.out.println("you equipped " + userInput);
+                            System.out.println("You equipped " + userInput + " and are now ready for combat!");
                             adventure.getPlayer().equipWeapon(userInput);
                         }
                         case CANT -> System.out.println(userInput + " cant be equipped");
@@ -133,7 +133,7 @@ public class UserInterface {
                     result = adventure.playerUnEquip();
                     switch (result) {
                         case OK -> {
-                            System.out.println("you unequipped " + userInput);
+                            System.out.println("You unequipped " + userInput);
                         }
                         case CANT -> System.out.println(userInput + " cant be unequipped");
                         case NOT_FOUND -> System.out.println(userInput + " cant be found in your inventory");
@@ -147,6 +147,7 @@ public class UserInterface {
                         System.out.println("\"Inventory: " + "\n");
                         for (Item item : adventure.getPlayer().getInventory()) {
                             System.out.println(item.getItemName());
+                            System.out.println(item.getItemDescription());
                         }
                     }
                     break;
@@ -165,44 +166,41 @@ public class UserInterface {
                     endProgram();
                     break;
 
-                case "die", "Die":
-                    System.out.println("You commit Suicide...");
+                case "die", "Die", "gu", "give up":
+                    System.out.println("Nooo! You gave up...");
                     endProgram();
                     break;
 
-                case "attack", "Attack","Shoot","shoot":
+                case "attack", "Attack","Shoot","shoot","swing","Swing":
 
                     AttackCommands attack = adventure.playerAttack(userInput);
-                    Item searchEquippedItem = adventure.getEquippedWeapon();
-                    Item itemInPlayer = adventure.getItem(userInput);
+                    Item searchEquippedWeapon = adventure.getEquippedWeapon();
+                    Item equippedWeapon = adventure.getItem(userInput);
 
                     if (attack == AttackCommands.Attack_Enemy) {
-                        System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedItem).getDamage() + " damage dealt");
-                        if (((Weapon) searchEquippedItem).getRemainingAmmo()!=0)
-                        System.out.println(((Weapon) searchEquippedItem).getRemainingAmmo() + " shots left");
+                        System.out.println("Enemy was attacked. " + ((Weapon) searchEquippedWeapon).getDamage() + " damage dealt");
+                        System.out.println("Ouch! The enemy struck back. Current health: "+adventure.getPlayer().getHealth()+" HP");
+                        if (((Weapon) searchEquippedWeapon).getRemainingAmmo()!=0)
+                        System.out.println(((Weapon) searchEquippedWeapon).getRemainingAmmo() + " shots left");
 
                     } else if (attack == AttackCommands.Enemy_Dead) {
-                        System.out.println(userInput + " is dead");
+                        System.out.println("Congrats! "+userInput + " has been slayed. Our crewmates are free and we can finally restart the spaceship's and get off this terrifying planet!");
 
                     } else if (attack == AttackCommands.No_Enemy) {
-                        System.out.println("No enemies nearby");
+                        System.out.println("There is no threats in here");
 
                     }else if (attack == AttackCommands.No_Ammo) {
-                        System.out.println("No ammunition left");
+                        System.out.println("Oh no! You are out of ammo");
 
                     } else if (attack == AttackCommands.No_Weapon_Equipped) {
-                        System.out.println("You dont have " + itemInPlayer + " equipped");
+                        System.out.println("You dont have " + equippedWeapon + " equipped");
 
                     } else {
-                        System.out.println("Invalid input (nothing matched your search)");
+                        System.out.println("Input invalid. Try again");
                     }
 
                     break;
 
-
-                case "spit", "Spit":
-                    System.out.println("You spit on yourself");
-                    break;
 
                 default:
                     System.out.println("Input invalid. Try again.");
