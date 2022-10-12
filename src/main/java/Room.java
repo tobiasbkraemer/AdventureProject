@@ -12,6 +12,14 @@ public class Room {
     private ArrayList<Enemy> enemies = new ArrayList<>();
 
 
+    @Override
+    public String toString() {
+        return "Room{" +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
     public Room(String name, String description) {
         this.name = name;
         this.description = description;

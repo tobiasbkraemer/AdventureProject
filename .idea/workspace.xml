@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Added almost attack">
+    <list default="true" id="8261a67f-1352-452f-9791-95808c399b70" name="Changes" comment="Lavet attack tingeling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AttackCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AttackCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="27b99ca6-0280-4079-a885-3806080f6d4c" name="Changes by kjartanleander" comment="Changes by kjartanleander" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665568325927</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Lavet attack tingeling">
+      <created>1665572489867</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1665572489867</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +304,7 @@
     <MESSAGE value="Formatteret linjer" />
     <MESSAGE value="Update på melee og ranged" />
     <MESSAGE value="Added almost attack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added almost attack" />
+    <MESSAGE value="Lavet attack tingeling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet attack tingeling" />
   </component>
 </project>

@@ -69,14 +69,16 @@ public class UserInterface {
 
                 case "look", "Look":
                     System.out.println("This is " + adventure.getCurrentRoom().getRoomName());
-                    System.out.println(adventure.getCurrentRoom().getRoomDescription());
+                    System.out.println(adventure.getCurrentRoom().getEnemies());
+                    //System.out.println(adventure.getCurrentRoom().getRoomDescription());
                     if (!adventure.getPlayer().getCurrentRoom().getRoomItems().isEmpty()) {
                         for (Item item : adventure.getPlayer().getCurrentRoom().getRoomItems()) {
                             System.out.println(item.getItemName() + ", " + item.getItemDescription());
+
                         }
                     }
-                    if (!adventure.getCurrentRoom().getEnemies().isEmpty()){
-                        for (Enemy enemy : adventure.getCurrentRoom().getEnemies()){
+                    if (!adventure.getCurrentRoom().getEnemies().isEmpty()) {
+                        for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
                             System.out.println(enemy.getName() + " is nearby, HP: " + enemy.getHealthPoints());
                         }
                     }
@@ -175,30 +177,26 @@ public class UserInterface {
                         case No_Enemy -> System.out.println("No threats in here");
                         case No_Such_Enemy -> {
                             System.out.println("Enemy doesn't exist");
-                            Enemy enemiesNearby = adventure.getCurrentRoom().getEnemies().get(0);
-                            if (!adventure.getPlayer().isDead()) {
-                                System.out.println("you attack " + enemiesNearby.getName() + " with " + adventure.getPlayer().getEquippedWeapon().getItemName());
-                                for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
-                                    System.out.println(enemy.getName() + " HP: " + enemy.getHealthPoints());
-                                }
-                                System.out.println("you got hit by " + enemiesNearby.getName() + "!");
-                                System.out.println("your health is now " + adventure.getPlayer().getHealth() + " HP");
-                            } else {
-                                System.out.println("you are dead, goodbye!!!");
-                                System.exit(1);
-                            }
                         }
-                        case No_Usable_Weapon -> System.out.println("That's not a weapon");
+
+                        case No_Ammo -> System.out.println("That's not a weapon");
                         case No_Weapon_Equipped -> System.out.println("You have no weapons equipped");
                         case Attack_Enemy -> {
+
+                            Enemy enemy1 = adventure.getCurrentRoom().getEnemies().get(0);
                             if (!adventure.getPlayer().isDead()) {
-                                System.out.println("you attack " +  userInput + " with " + adventure.getPlayer().getEquippedWeapon().getItemName());
-                                for (Enemy enemy : adventure.getCurrentRoom().getEnemies()){
-                                    System.out.println(enemy.getName() +  " HP: " + enemy.getHealthPoints());
+                                System.out.println("you attacked " + enemy1.getName() + " with " + adventure.getPlayer().getEquippedWeapon().getItemName());
+
+                                if (userInput.toLowerCase().equals(adventure.getCurrentRoom().getEnemies().get(0).getName())) {
+                                    System.out.println(enemy1.getName() + "HP: " + enemy1.getHealthPoints());
                                 }
-                                System.out.println("you got hit by " + userInput+"!");
+
+                                for (Enemy enemy : adventure.getCurrentRoom().getEnemies()) {
+                                    System.out.println(enemy.getName() + " HP: " + (enemy.getHealthPoints() - adventure.getPlayer().getEquippedWeapon().getDamage()));
+                                }
+                                System.out.println("you got hit by " + userInput + "!");
                                 System.out.println("your health is now " + adventure.getPlayer().getHealth() + " HP");
-                            }else{
+                            } else {
                                 System.out.println("you are dead, goodbye!!!");
                                 System.exit(1);
                             }
@@ -206,6 +204,7 @@ public class UserInterface {
 
                     }
                     break;
+
 
                 case "spit", "Spit":
                     System.out.println("You spit on yourself");
@@ -216,8 +215,8 @@ public class UserInterface {
                     break;
             }
         }
-
     }
+
 
     public void showHelp() {
         System.out.println("""
