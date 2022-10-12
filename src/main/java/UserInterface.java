@@ -169,6 +169,18 @@ public class UserInterface {
                     switch (attackResult) {
                         case No_Enemy -> System.out.println("No threats in here");
                         case No_Such_Enemy -> System.out.println("Enemy doesn't exist");
+                        Enemy enemiesNearby = adventure.getCurrentRoom().getEnemies().get(0);
+                        if (!adventure.getPlayer().isDead()) {
+                            System.out.println("you attack " + enemiesNearby.getName() + " with "  + adventure.getPlayer().getEquippedWeapon().getItemName());
+                            for (Enemy enemy : adventure.getCurrentRoom().getEnemies()){
+                                System.out.println(enemy.getName() + " HP: " + enemy.getHealthPoints());
+                            }
+                            System.out.println("you got hit by " + bold + nearestEnemy.getName() + unBold + "!");
+                            System.out.println("your health is now " + bold + adventure.getPlayer().getHealth() + unBold + " HP");
+                        }else{
+                            System.out.println("you are dead, goodbye!!!");
+                            System.exit(1);
+                        }
                         case No_Usable_Weapon -> System.out.println("That's not a weapon");
                         case No_Weapon_Equipped -> System.out.println("You have no weapons equipped");
                         case Attack_Enemy -> System.out.println("Attaaaaack!");
