@@ -16,8 +16,12 @@ public class UserInterface {
     }
 
     public void welcome() {
-        System.out.println("-".repeat(30) + "\n" + "Welcome on board the spaceship! \n"+ adventure.getCurrentRoom().getRoomDescription()
-                 +"\nFeel free to look around. Let me know if you need any help."+"\n"+ "-".repeat(30));
+        System.out.println("-".repeat(30) + "\n" + "Thanks God! You finally woke up after we crashed. " +
+                "We have ended up on a strange planet. The engines don't work and all our crewmates are gone. " +
+                "You have to find them and restart the engines so we can get get off this planet. " +
+                "But watch out, because I think there are other unidentified life forms on board the space ship. \n"
+                + adventure.getCurrentRoom().getRoomDescription()
+                + "\nFeel free to look around. Let me know if you need any help."+"\n"+ "-".repeat(30));
         String input = "";
         handleInput(input);
     }
