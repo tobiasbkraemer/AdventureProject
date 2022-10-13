@@ -5,12 +5,12 @@ public class Map {
     ArrayList<Item> items = new ArrayList<>();
 
     public void createMap() {
-        Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map over the spaceship.");
+        Room room1 = new Room("Navigation", "This is the main room of the spaceship. In the middle of the room there is a table with a map of the spaceship.");
         Room room2 = new Room("Cafeteria", "This is the Cafeteria. It's surprisingly clean in here, but there is a weird smell. It looks like old food on the table in front of you");
-        Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a rifle hanging on the wall, next to a big axe.");
+        Room room3 = new Room("Weapon arsenal", "This is the weapon arsenal, there is a rifles hanging on the wall, next to some big axes.");
         Room room4 = new Room("Medical", "This is the medical room. It's filled with unknown pills. the label is teared off, cant read the effects, but they could be useful.");
-        Room room5 = new Room("Engine", "\"ARAARARGH!!!\" In the center of the engine room stands a alien guarding the crewmates and the engines. Equip a weapon and defeat the alien! "+"\n"+"But be careful, because it looks like the alien might fight back.");
-        Room room6 = new Room("Electrical", "This is electrical. It looks like the powersource to the spaceship.");
+        Room room5 = new Room("Engine", "\"ARAARARGH!!!\" In the center of the engine room stands an alien guarding the crew mates and the engines. Equip a weapon and defeat the alien! "+"\n"+"But be careful, because it looks like the alien might fight back.");
+        Room room6 = new Room("Electrical", "This is electrical. It looks like the power-source to the spaceship.");
         Room room7 = new Room("Dormitory","This is the dormitory. The room is full of beds. It's quiet in here, but that's rarely a good sign.");
         Room room8 = new Room("Storage", "Even though it is completely dark in Storage, you can almost feel the spiderwebs hanging from the ceiling and dust covering every surface. There may be some useful things in here, but it's too dark to see.");
         Room room9 = new Room("Communication", "You are in the communication-room. This is where all contact in and out the spaceship takes place.");

@@ -234,18 +234,14 @@ public class UserInterface {
                 Commands:
                 Type look to see what room you are in, and a description of your surroundings
                 Type exit or die to exit the game
-                Type eat to eat a food
+                Type eat + food name, to eat food
                 Type Equip followed by a weapon to equip it
                 Type Unequip followed by a enquipped weapon to unequip it
                 Type Weapons to see equipped weapons
-                Type inv to see inventory
-                Type drop to drop a item
-                Type health to see current health 
-                Type an item's name to use a item in your inventory
-                Type hit to hit yourself
-                Type punch to punch yourself
-                Type spit to spit on yourself
-                Type fart to fart""");
+                Type inv or inventory, to see your inventory
+                Type drop + item name, to drop an item
+                Type health or hp to see current health 
+                """);
 
     }
 
